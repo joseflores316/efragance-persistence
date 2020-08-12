@@ -28,4 +28,7 @@ C:
 .attach*
 .sts4-cache/
 *.pdf
+.mvn
+.scannerwork
+
 
