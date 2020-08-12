@@ -1,0 +1,19 @@
+--liquibase formatted sql
+--changeset efragance:create-table-FORMULAS_DILUTIONS_REL-v1.0.1
+DROP TABLE IF EXISTS `FORMULAS_DILUTIONS_REL`;
+CREATE TABLE `FORMULAS_DILUTIONS_REL` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `CREATED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CREATED_DATE` datetime(6) NOT NULL,
+  `MODIFIED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MODIFIED_DATE` datetime(6) NOT NULL,
+  `VERSION` bigint(20) NOT NULL,
+  `DILUTION_ID` bigint(20) NOT NULL,
+  `FORMULA_ID` bigint(20) NOT NULL,
+  `QUANTITY` decimal(5,0) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK6gyrd8irnlg21n45hqj4lotcp` (`DILUTION_ID`),
+  KEY `FKe0akhiqukjjy5ps5lwc6g983w` (`FORMULA_ID`),
+  CONSTRAINT `FK6gyrd8irnlg21n45hqj4lotcp` FOREIGN KEY (`DILUTION_ID`) REFERENCES `DILUTIONS` (`ID`),
+  CONSTRAINT `FKe0akhiqukjjy5ps5lwc6g983w` FOREIGN KEY (`FORMULA_ID`) REFERENCES `FORMULAS` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci

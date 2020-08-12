@@ -1,0 +1,23 @@
+--liquibase formatted sql
+--changeset efragance:create-table-FORMULAS_REL-v1.0.1
+DROP TABLE IF EXISTS `FORMULAS_REL`;
+CREATE TABLE `FORMULAS_REL` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `CREATED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CREATED_DATE` datetime(6) NOT NULL,
+  `MODIFIED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MODIFIED_DATE` datetime(6) NOT NULL,
+  `VERSION` bigint(20) NOT NULL,
+  `FORMULA_ID` bigint(20) NOT NULL,
+  `QUANTITY` decimal(5,0) NOT NULL,
+  `RELATION_LEVEL` int(11) DEFAULT NULL,
+  `SUBFORMULA_ID` bigint(20) NOT NULL,
+  `SUBFORMULA_PARENT_ID` bigint(20) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FKb7hla8isxxv7o8rlsafabtxik` (`FORMULA_ID`),
+  KEY `FKg51wilr34gamcvd2f6egnexde` (`SUBFORMULA_ID`),
+  KEY `FKd8atfqqqugrxa9pgwfmip4w32` (`SUBFORMULA_PARENT_ID`),
+  CONSTRAINT `FKb7hla8isxxv7o8rlsafabtxik` FOREIGN KEY (`FORMULA_ID`) REFERENCES `FORMULAS` (`ID`),
+  CONSTRAINT `FKd8atfqqqugrxa9pgwfmip4w32` FOREIGN KEY (`SUBFORMULA_PARENT_ID`) REFERENCES `FORMULAS` (`ID`),
+  CONSTRAINT `FKg51wilr34gamcvd2f6egnexde` FOREIGN KEY (`SUBFORMULA_ID`) REFERENCES `FORMULAS` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci

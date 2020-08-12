@@ -1,0 +1,19 @@
+--liquibase formatted sql
+--changeset efragance:create-table-FORMULAS_RAW_MATERIALS_REL-v1.0.1
+DROP TABLE IF EXISTS `FORMULAS_RAW_MATERIALS_REL`;
+CREATE TABLE `FORMULAS_RAW_MATERIALS_REL` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `CREATED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CREATED_DATE` datetime(6) NOT NULL,
+  `MODIFIED_BY` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MODIFIED_DATE` datetime(6) NOT NULL,
+  `VERSION` bigint(20) NOT NULL,
+  `FORMULA_ID` bigint(20) NOT NULL,
+  `QUANTITY` decimal(5,0) NOT NULL,
+  `RAW_MATERIAL_ID` bigint(20) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FKan4gsrdftgoxtamt15u0k0l4s` (`FORMULA_ID`),
+  KEY `FKqln6d1478l6sjnadpjdh8mm1` (`RAW_MATERIAL_ID`),
+  CONSTRAINT `FKan4gsrdftgoxtamt15u0k0l4s` FOREIGN KEY (`FORMULA_ID`) REFERENCES `FORMULAS` (`ID`),
+  CONSTRAINT `FKqln6d1478l6sjnadpjdh8mm1` FOREIGN KEY (`RAW_MATERIAL_ID`) REFERENCES `RAW_MATERIALS` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
