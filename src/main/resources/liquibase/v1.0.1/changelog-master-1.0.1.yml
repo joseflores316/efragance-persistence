@@ -1,77 +1,77 @@
 ﻿databaseChangeLog:
 - include:
-    file: ddl/createUsers.sql
+    file: ddl/createUsers.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createRoles.sql
+    file: ddl/createRoles.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createUsersRoles.sql
+    file: ddl/createUsersRoles.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createAnnexes.sql
+    file: dml/usersData.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createSubstances.sql
+    file: ddl/createAnnexes.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createApplications.sql
+    file: ddl/createApplications.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createDilutions.sql
+    file: ddl/createSubstances.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createRawMaterials.sql
+    file: ddl/createRawMaterials.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createFormulas.sql
+    file: ddl/createDilutions.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createSapIntegrations.sql
+    file: ddl/createFormulas.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createMaxDose.sql
+    file: ddl/createSapIntegrations.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createFormulasRel.sql
+    file: ddl/createMaxDose.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createFormulasDilutionsRel.sql
+    file: ddl/createCertificates.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createFormulaSubstances.sql
+    file: ddl/createFormulaSubstances.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createFormulasRawMaterialRel.sql
+    file: ddl/createDilutionsRawMaterialRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createDilutionsRel.sql
+    file: ddl/createFormulasRawMaterialRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createDilutionsRawMaterialRel.sql
+    file: ddl/createFormulasDilutionsRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/createCertificates.sql
+    file: ddl/createFormulasRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: dml/usersData.sql
+    file: ddl/createDilutionsRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"

@@ -1,0 +1,69 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  create-table-FORMULAS_DILUTIONS_REL-v1.0.1 
+      author:  efragance
+      comment: "Create table FORMULAS_DILUTIONS_REL"
+      tag: 1.0.1
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: FORMULAS_DILUTIONS_REL
+      changes:  
+       -  tagDatabase:  
+           tag:  1.0.1
+       -  createTable:  
+           tableName:  FORMULAS_DILUTIONS_REL  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_FORMULAS_DILUTIONS_REL
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false  
+           - column:
+                name: DILUTION_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FORMULAS_DILUTIONS_REL_DILUTION_ID
+                  references: DILUTIONS(ID)
+           - column:
+                name: FORMULA_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FORMULAS_DILUTIONS_REL_FORMULA_ID
+                  references: FORMULAS(ID)
+           - column:
+                name: QUANTITY
+                type: DECIMAL(10,5)
+                constraints:
+                  nullable: false

@@ -1,0 +1,12 @@
+﻿databaseChangeLog:
+-  property:  
+    dbms:  mysql,mariadb,h2  
+    name:  "current.date"  
+    value:  "NOW()" 
+-  property:  
+    dbms:  oracle  
+    name:  "current.date"  
+    value:  "SYSDATE()" 
+- include:
+    file: v1.0.1/changelog-master-1.0.1.yml
+    relativeToChangelogFile: true
