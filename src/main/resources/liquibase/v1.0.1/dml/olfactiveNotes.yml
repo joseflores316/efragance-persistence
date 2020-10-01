@@ -14,7 +14,7 @@ databaseChangeLog:
                   name: ID
                   value: 1
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ORANGE BLOSSOM"
               - column:
                   name: I18N
@@ -41,7 +41,7 @@ databaseChangeLog:
                   name: ID
                   value: 2
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BANANA"
               - column:
                   name: I18N
@@ -68,7 +68,7 @@ databaseChangeLog:
                   name: ID
                   value: 3
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MAGNOLIA"
               - column:
                   name: I18N
@@ -95,7 +95,7 @@ databaseChangeLog:
                   name: ID
                   value: 4
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MANDARIN"
               - column:
                   name: I18N
@@ -122,7 +122,7 @@ databaseChangeLog:
                   name: ID
                   value: 5
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MANGO"
               - column:
                   name: I18N
@@ -149,7 +149,7 @@ databaseChangeLog:
                   name: ID
                   value: 6
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MARIGOLD"
               - column:
                   name: I18N
@@ -176,7 +176,7 @@ databaseChangeLog:
                   name: ID
                   value: 7
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MARINE"
               - column:
                   name: I18N
@@ -203,7 +203,7 @@ databaseChangeLog:
                   name: ID
                   value: 8
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MEDICINAL"
               - column:
                   name: I18N
@@ -230,7 +230,7 @@ databaseChangeLog:
                   name: ID
                   value: 9
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MELON"
               - column:
                   name: I18N
@@ -257,7 +257,7 @@ databaseChangeLog:
                   name: ID
                   value: 10
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MILK"
               - column:
                   name: I18N
@@ -284,7 +284,7 @@ databaseChangeLog:
                   name: ID
                   value: 11
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MIMOSA"
               - column:
                   name: I18N
@@ -311,7 +311,7 @@ databaseChangeLog:
                   name: ID
                   value: 12
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MINT"
               - column:
                   name: I18N
@@ -338,7 +338,7 @@ databaseChangeLog:
                   name: ID
                   value: 13
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BARK"
               - column:
                   name: I18N
@@ -365,7 +365,7 @@ databaseChangeLog:
                   name: ID
                   value: 14
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MOSS"
               - column:
                   name: I18N
@@ -392,7 +392,7 @@ databaseChangeLog:
                   name: ID
                   value: 15
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MUKHALAT"
               - column:
                   name: I18N
@@ -419,7 +419,7 @@ databaseChangeLog:
                   name: ID
                   value: 16
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MUSKY"
               - column:
                   name: I18N
@@ -446,7 +446,7 @@ databaseChangeLog:
                   name: ID
                   value: 17
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NARCISSUS"
               - column:
                   name: I18N
@@ -469,11 +469,11 @@ databaseChangeLog:
         - insert:
             tableName: OLFACTIVE_NOTES
             columns:
-              - column: 
+              - column:
                   name: ID
                   value: 18
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NARCOTIC"
               - column:
                   name: I18N
@@ -500,7 +500,7 @@ databaseChangeLog:
                   name: ID
                   value: 19
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NECTARINE"
               - column:
                   name: I18N
@@ -527,7 +527,7 @@ databaseChangeLog:
                   name: ID
                   value: 20
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NEROLI"
               - column:
                   name: I18N
@@ -554,7 +554,7 @@ databaseChangeLog:
                   name: ID
                   value: 21
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NUT"
               - column:
                   name: I18N
@@ -581,7 +581,7 @@ databaseChangeLog:
                   name: ID
                   value: 22
               - column:
-                  name: NAME
+                  name: CODE
                   value: "NUTMEG"
               - column:
                   name: I18N
@@ -608,7 +608,7 @@ databaseChangeLog:
                   name: ID
                   value: 23
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ODOURLESS"
               - column:
                   name: I18N
@@ -635,7 +635,7 @@ databaseChangeLog:
                   name: ID
                   value: 24
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BASIL"
               - column:
                   name: I18N
@@ -662,7 +662,7 @@ databaseChangeLog:
                   name: ID
                   value: 25
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OPOPONAX"
               - column:
                   name: I18N
@@ -689,7 +689,7 @@ databaseChangeLog:
                   name: ID
                   value: 26
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ORANGE"
               - column:
                   name: I18N
@@ -716,7 +716,7 @@ databaseChangeLog:
                   name: ID
                   value: 27
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ORCHID"
               - column:
                   name: I18N
@@ -743,7 +743,7 @@ databaseChangeLog:
                   name: ID
                   value: 28
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OREGANUM"
               - column:
                   name: I18N
@@ -770,7 +770,7 @@ databaseChangeLog:
                   name: ID
                   value: 29
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ORIENTAL"
               - column:
                   name: I18N
@@ -797,7 +797,7 @@ databaseChangeLog:
                   name: ID
                   value: 30
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ORRIS"
               - column:
                   name: I18N
@@ -824,7 +824,7 @@ databaseChangeLog:
                   name: ID
                   value: 31
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OSMANTUS"
               - column:
                   name: I18N
@@ -851,7 +851,7 @@ databaseChangeLog:
                   name: ID
                   value: 32
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OUD"
               - column:
                   name: I18N
@@ -878,7 +878,7 @@ databaseChangeLog:
                   name: ID
                   value: 33
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OZONIC"
               - column:
                   name: I18N
@@ -905,7 +905,7 @@ databaseChangeLog:
                   name: ID
                   value: 34
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PALMAROSA"
               - column:
                   name: I18N
@@ -932,7 +932,7 @@ databaseChangeLog:
                   name: ID
                   value: 35
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BAY"
               - column:
                   name: I18N
@@ -959,7 +959,7 @@ databaseChangeLog:
                   name: ID
                   value: 36
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PAPAYA"
               - column:
                   name: I18N
@@ -986,7 +986,7 @@ databaseChangeLog:
                   name: ID
                   value: 37
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PASSIONFRUIT"
               - column:
                   name: I18N
@@ -1013,7 +1013,7 @@ databaseChangeLog:
                   name: ID
                   value: 38
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PATCHOULI"
               - column:
                   name: I18N
@@ -1040,7 +1040,7 @@ databaseChangeLog:
                   name: ID
                   value: 39
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PEACH"
               - column:
                   name: I18N
@@ -1067,7 +1067,7 @@ databaseChangeLog:
                   name: ID
                   value: 40
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PEAR"
               - column:
                   name: I18N
@@ -1094,7 +1094,7 @@ databaseChangeLog:
                   name: ID
                   value: 41
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PEPPER"
               - column:
                   name: I18N
@@ -1121,7 +1121,7 @@ databaseChangeLog:
                   name: ID
                   value: 42
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PERU BALSAM"
               - column:
                   name: I18N
@@ -1148,7 +1148,7 @@ databaseChangeLog:
                   name: ID
                   value: 43
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PETITGRAIN"
               - column:
                   name: I18N
@@ -1175,7 +1175,7 @@ databaseChangeLog:
                   name: ID
                   value: 44
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PHENOLIC"
               - column:
                   name: I18N
@@ -1202,7 +1202,7 @@ databaseChangeLog:
                   name: ID
                   value: 45
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PINE"
               - column:
                   name: I18N
@@ -1229,7 +1229,7 @@ databaseChangeLog:
                   name: ID
                   value: 46
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BENZOIN"
               - column:
                   name: I18N
@@ -1256,7 +1256,7 @@ databaseChangeLog:
                   name: ID
                   value: 47
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PINEAPPLE"
               - column:
                   name: I18N
@@ -1283,7 +1283,7 @@ databaseChangeLog:
                   name: ID
                   value: 48
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PLUM"
               - column:
                   name: I18N
@@ -1310,7 +1310,7 @@ databaseChangeLog:
                   name: ID
                   value: 49
               - column:
-                  name: NAME
+                  name: CODE
                   value: "POWDERY"
               - column:
                   name: I18N
@@ -1337,7 +1337,7 @@ databaseChangeLog:
                   name: ID
                   value: 50
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ASPID, S.A. DE C.V."
               - column:
                   name: I18N
@@ -1364,7 +1364,7 @@ databaseChangeLog:
                   name: ID
                   value: 51
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RASPBERRY"
               - column:
                   name: I18N
@@ -1391,7 +1391,7 @@ databaseChangeLog:
                   name: ID
                   value: 52
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RED FRUITS"
               - column:
                   name: I18N
@@ -1418,7 +1418,7 @@ databaseChangeLog:
                   name: ID
                   value: 53
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RIPE"
               - column:
                   name: I18N
@@ -1445,7 +1445,7 @@ databaseChangeLog:
                   name: ID
                   value: 54
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ROSE"
               - column:
                   name: I18N
@@ -1472,7 +1472,7 @@ databaseChangeLog:
                   name: ID
                   value: 55
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ROSEMARY"
               - column:
                   name: I18N
@@ -1499,7 +1499,7 @@ databaseChangeLog:
                   name: ID
                   value: 56
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ROSEWOOD"
               - column:
                   name: I18N
@@ -1526,7 +1526,7 @@ databaseChangeLog:
                   name: ID
                   value: 57
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BERGAMOT"
               - column:
                   name: I18N
@@ -1553,7 +1553,7 @@ databaseChangeLog:
                   name: ID
                   value: 58
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SAFFRON"
               - column:
                   name: I18N
@@ -1580,7 +1580,7 @@ databaseChangeLog:
                   name: ID
                   value: 59
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SAGE"
               - column:
                   name: I18N
@@ -1607,7 +1607,7 @@ databaseChangeLog:
                   name: ID
                   value: 60
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SANDALWOOD"
               - column:
                   name: I18N
@@ -1634,7 +1634,7 @@ databaseChangeLog:
                   name: ID
                   value: 61
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SHAMAMA"
               - column:
                   name: I18N
@@ -1661,7 +1661,7 @@ databaseChangeLog:
                   name: ID
                   value: 62
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SMOKY"
               - column:
                   name: I18N
@@ -1688,7 +1688,7 @@ databaseChangeLog:
                   name: ID
                   value: 63
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SPEARMINT"
               - column:
                   name: I18N
@@ -1715,7 +1715,7 @@ databaseChangeLog:
                   name: ID
                   value: 64
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SPICY"
               - column:
                   name: I18N
@@ -1742,7 +1742,7 @@ databaseChangeLog:
                   name: ID
                   value: 65
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SPIKE"
               - column:
                   name: I18N
@@ -1769,7 +1769,7 @@ databaseChangeLog:
                   name: ID
                   value: 66
               - column:
-                  name: NAME
+                  name: CODE
                   value: "STAR ANISE"
               - column:
                   name: I18N
@@ -1796,7 +1796,7 @@ databaseChangeLog:
                   name: ID
                   value: 67
               - column:
-                  name: NAME
+                  name: CODE
                   value: "STRAWBERRY"
               - column:
                   name: I18N
@@ -1823,7 +1823,7 @@ databaseChangeLog:
                   name: ID
                   value: 68
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BIRCH"
               - column:
                   name: I18N
@@ -1850,7 +1850,7 @@ databaseChangeLog:
                   name: ID
                   value: 69
               - column:
-                  name: NAME
+                  name: CODE
                   value: "STYRAX"
               - column:
                   name: I18N
@@ -1877,7 +1877,7 @@ databaseChangeLog:
                   name: ID
                   value: 70
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SWEET"
               - column:
                   name: I18N
@@ -1904,7 +1904,7 @@ databaseChangeLog:
                   name: ID
                   value: 71
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TAGETTE"
               - column:
                   name: I18N
@@ -1931,7 +1931,7 @@ databaseChangeLog:
                   name: ID
                   value: 72
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TARRAGON"
               - column:
                   name: I18N
@@ -1958,7 +1958,7 @@ databaseChangeLog:
                   name: ID
                   value: 73
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TEA"
               - column:
                   name: I18N
@@ -1985,7 +1985,7 @@ databaseChangeLog:
                   name: ID
                   value: 74
               - column:
-                  name: NAME
+                  name: CODE
                   value: "THYME"
               - column:
                   name: I18N
@@ -2012,7 +2012,7 @@ databaseChangeLog:
                   name: ID
                   value: 75
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TOASTED"
               - column:
                   name: I18N
@@ -2039,7 +2039,7 @@ databaseChangeLog:
                   name: ID
                   value: 76
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TOBACCO"
               - column:
                   name: I18N
@@ -2066,7 +2066,7 @@ databaseChangeLog:
                   name: ID
                   value: 77
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TOFFEE"
               - column:
                   name: I18N
@@ -2093,7 +2093,7 @@ databaseChangeLog:
                   name: ID
                   value: 78
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TOMATO"
               - column:
                   name: I18N
@@ -2120,7 +2120,7 @@ databaseChangeLog:
                   name: ID
                   value: 79
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BITTER"
               - column:
                   name: I18N
@@ -2147,7 +2147,7 @@ databaseChangeLog:
                   name: ID
                   value: 80
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TONKA"
               - column:
                   name: I18N
@@ -2174,7 +2174,7 @@ databaseChangeLog:
                   name: ID
                   value: 81
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TROPICAL"
               - column:
                   name: I18N
@@ -2201,7 +2201,7 @@ databaseChangeLog:
                   name: ID
                   value: 82
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TUBEROSE"
               - column:
                   name: I18N
@@ -2228,7 +2228,7 @@ databaseChangeLog:
                   name: ID
                   value: 83
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TUTTI FRUTTI"
               - column:
                   name: I18N
@@ -2255,7 +2255,7 @@ databaseChangeLog:
                   name: ID
                   value: 84
               - column:
-                  name: NAME
+                  name: CODE
                   value: "VANILLA"
               - column:
                   name: I18N
@@ -2282,7 +2282,7 @@ databaseChangeLog:
                   name: ID
                   value: 85
               - column:
-                  name: NAME
+                  name: CODE
                   value: "VERBENA"
               - column:
                   name: I18N
@@ -2309,7 +2309,7 @@ databaseChangeLog:
                   name: ID
                   value: 86
               - column:
-                  name: NAME
+                  name: CODE
                   value: "VETIVER"
               - column:
                   name: I18N
@@ -2336,7 +2336,7 @@ databaseChangeLog:
                   name: ID
                   value: 87
               - column:
-                  name: NAME
+                  name: CODE
                   value: "VIOLET"
               - column:
                   name: I18N
@@ -2363,7 +2363,7 @@ databaseChangeLog:
                   name: ID
                   value: 88
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WATERMELON"
               - column:
                   name: I18N
@@ -2390,7 +2390,7 @@ databaseChangeLog:
                   name: ID
                   value: 89
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WHITE FLOWER"
               - column:
                   name: I18N
@@ -2417,7 +2417,7 @@ databaseChangeLog:
                   name: ID
                   value: 90
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BITTER ALMOND"
               - column:
                   name: I18N
@@ -2444,7 +2444,7 @@ databaseChangeLog:
                   name: ID
                   value: 91
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WINE"
               - column:
                   name: I18N
@@ -2471,7 +2471,7 @@ databaseChangeLog:
                   name: ID
                   value: 92
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WOODY"
               - column:
                   name: I18N
@@ -2498,7 +2498,7 @@ databaseChangeLog:
                   name: ID
                   value: 93
               - column:
-                  name: NAME
+                  name: CODE
                   value: "YLANG-YLANG"
               - column:
                   name: I18N
@@ -2525,7 +2525,7 @@ databaseChangeLog:
                   name: ID
                   value: 94
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RUM"
               - column:
                   name: I18N
@@ -2552,7 +2552,7 @@ databaseChangeLog:
                   name: ID
                   value: 95
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PEONY"
               - column:
                   name: I18N
@@ -2579,7 +2579,7 @@ databaseChangeLog:
                   name: ID
                   value: 96
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TIARE"
               - column:
                   name: I18N
@@ -2606,7 +2606,7 @@ databaseChangeLog:
                   name: ID
                   value: 97
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WISTERIA"
               - column:
                   name: I18N
@@ -2633,7 +2633,7 @@ databaseChangeLog:
                   name: ID
                   value: 98
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SAMBAC JASMINE"
               - column:
                   name: I18N
@@ -2660,7 +2660,7 @@ databaseChangeLog:
                   name: ID
                   value: 99
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FRANGIPANI"
               - column:
                   name: I18N
@@ -2687,7 +2687,7 @@ databaseChangeLog:
                   name: ID
                   value: 100
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HONEYSUCKLE"
               - column:
                   name: I18N
@@ -2714,7 +2714,7 @@ databaseChangeLog:
                   name: ID
                   value: 101
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BLACKBERRY"
               - column:
                   name: I18N
@@ -2741,7 +2741,7 @@ databaseChangeLog:
                   name: ID
                   value: 102
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TEA ROSE"
               - column:
                   name: I18N
@@ -2768,7 +2768,7 @@ databaseChangeLog:
                   name: ID
                   value: 103
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ALDEHYDIC"
               - column:
                   name: I18N
@@ -2795,7 +2795,7 @@ databaseChangeLog:
                   name: ID
                   value: 104
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BLACKCURRANT"
               - column:
                   name: I18N
@@ -2822,7 +2822,7 @@ databaseChangeLog:
                   name: ID
                   value: 105
               - column:
-                  name: NAME
+                  name: CODE
                   value: "DAVANA"
               - column:
                   name: I18N
@@ -2849,7 +2849,7 @@ databaseChangeLog:
                   name: ID
                   value: 106
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SOLAR"
               - column:
                   name: I18N
@@ -2876,7 +2876,7 @@ databaseChangeLog:
                   name: ID
                   value: 107
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GUAIACWOOD"
               - column:
                   name: I18N
@@ -2903,7 +2903,7 @@ databaseChangeLog:
                   name: ID
                   value: 108
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RHUBARB"
               - column:
                   name: I18N
@@ -2930,7 +2930,7 @@ databaseChangeLog:
                   name: ID
                   value: 109
               - column:
-                  name: NAME
+                  name: CODE
                   value: "OLIVE"
               - column:
                   name: I18N
@@ -2957,7 +2957,7 @@ databaseChangeLog:
                   name: ID
                   value: 110
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ALMOND"
               - column:
                   name: I18N
@@ -2984,7 +2984,7 @@ databaseChangeLog:
                   name: ID
                   value: 111
               - column:
-                  name: NAME
+                  name: CODE
                   value: "JATAMANSI"
               - column:
                   name: I18N
@@ -3011,7 +3011,7 @@ databaseChangeLog:
                   name: ID
                   value: 112
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CYPRIOL"
               - column:
                   name: I18N
@@ -3038,7 +3038,7 @@ databaseChangeLog:
                   name: ID
                   value: 113
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SEAWEED"
               - column:
                   name: I18N
@@ -3065,7 +3065,7 @@ databaseChangeLog:
                   name: ID
                   value: 114
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SALTY"
               - column:
                   name: I18N
@@ -3092,7 +3092,7 @@ databaseChangeLog:
                   name: ID
                   value: 115
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BLUEBERRY"
               - column:
                   name: I18N
@@ -3119,7 +3119,7 @@ databaseChangeLog:
                   name: ID
                   value: 116
               - column:
-                  name: NAME
+                  name: CODE
                   value: "AMBERGRIS"
               - column:
                   name: I18N
@@ -3146,7 +3146,7 @@ databaseChangeLog:
                   name: ID
                   value: 117
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CURRY"
               - column:
                   name: I18N
@@ -3173,7 +3173,7 @@ databaseChangeLog:
                   name: ID
                   value: 118
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CISTUS"
               - column:
                   name: I18N
@@ -3200,7 +3200,7 @@ databaseChangeLog:
                   name: ID
                   value: 119
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PINK PEPPER"
               - column:
                   name: I18N
@@ -3227,7 +3227,7 @@ databaseChangeLog:
                   name: ID
                   value: 120
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RICE"
               - column:
                   name: I18N
@@ -3254,7 +3254,7 @@ databaseChangeLog:
                   name: ID
                   value: 121
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SUGARY"
               - column:
                   name: I18N
@@ -3281,7 +3281,7 @@ databaseChangeLog:
                   name: ID
                   value: 122
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MARSHMALLOW"
               - column:
                   name: I18N
@@ -3308,7 +3308,7 @@ databaseChangeLog:
                   name: ID
                   value: 123
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GINGERBREAD"
               - column:
                   name: I18N
@@ -3335,7 +3335,7 @@ databaseChangeLog:
                   name: ID
                   value: 124
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MAPLE SYRUP"
               - column:
                   name: I18N
@@ -3362,7 +3362,7 @@ databaseChangeLog:
                   name: ID
                   value: 125
               - column:
-                  name: NAME
+                  name: CODE
                   value: "DRY FRUITS"
               - column:
                   name: I18N
@@ -3389,7 +3389,7 @@ databaseChangeLog:
                   name: ID
                   value: 126
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BREAD"
               - column:
                   name: I18N
@@ -3416,7 +3416,7 @@ databaseChangeLog:
                   name: ID
                   value: 127
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHESTNUT"
               - column:
                   name: I18N
@@ -3443,7 +3443,7 @@ databaseChangeLog:
                   name: ID
                   value: 128
               - column:
-                  name: NAME
+                  name: CODE
                   value: "WALNUT"
               - column:
                   name: I18N
@@ -3470,7 +3470,7 @@ databaseChangeLog:
                   name: ID
                   value: 129
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PISTACHIO"
               - column:
                   name: I18N
@@ -3497,7 +3497,7 @@ databaseChangeLog:
                   name: ID
                   value: 130
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MATE"
               - column:
                   name: I18N
@@ -3524,7 +3524,7 @@ databaseChangeLog:
                   name: ID
                   value: 131
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SUEDE"
               - column:
                   name: I18N
@@ -3551,7 +3551,7 @@ databaseChangeLog:
                   name: ID
                   value: 132
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MYRRH"
               - column:
                   name: I18N
@@ -3578,7 +3578,7 @@ databaseChangeLog:
                   name: ID
                   value: 133
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ARMOISE"
               - column:
                   name: I18N
@@ -3605,7 +3605,7 @@ databaseChangeLog:
                   name: ID
                   value: 134
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ELEMI"
               - column:
                   name: I18N
@@ -3632,7 +3632,7 @@ databaseChangeLog:
                   name: ID
                   value: 135
               - column:
-                  name: NAME
+                  name: CODE
                   value: "JAM"
               - column:
                   name: I18N
@@ -3659,7 +3659,7 @@ databaseChangeLog:
                   name: ID
                   value: 136
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GURJUM"
               - column:
                   name: I18N
@@ -3686,7 +3686,7 @@ databaseChangeLog:
                   name: ID
                   value: 137
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CALAMUS"
               - column:
                   name: I18N
@@ -3713,7 +3713,7 @@ databaseChangeLog:
                   name: ID
                   value: 138
               - column:
-                  name: NAME
+                  name: CODE
                   value: "SAP"
               - column:
                   name: I18N
@@ -3740,7 +3740,7 @@ databaseChangeLog:
                   name: ID
                   value: 139
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LEAFY"
               - column:
                   name: I18N
@@ -3767,7 +3767,7 @@ databaseChangeLog:
                   name: ID
                   value: 140
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHERRY BLOSSOM"
               - column:
                   name: I18N
@@ -3794,7 +3794,7 @@ databaseChangeLog:
                   name: ID
                   value: 141
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FENNEL"
               - column:
                   name: I18N
@@ -3821,7 +3821,7 @@ databaseChangeLog:
                   name: ID
                   value: 142
               - column:
-                  name: NAME
+                  name: CODE
                   value: "VALERIAN"
               - column:
                   name: I18N
@@ -3848,7 +3848,7 @@ databaseChangeLog:
                   name: ID
                   value: 143
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CEREAL"
               - column:
                   name: I18N
@@ -3875,7 +3875,7 @@ databaseChangeLog:
                   name: ID
                   value: 144
               - column:
-                  name: NAME
+                  name: CODE
                   value: "KEORA"
               - column:
                   name: I18N
@@ -3902,7 +3902,7 @@ databaseChangeLog:
                   name: ID
                   value: 145
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LOTUS"
               - column:
                   name: I18N
@@ -3929,7 +3929,7 @@ databaseChangeLog:
                   name: ID
                   value: 146
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CASHMERE"
               - column:
                   name: I18N
@@ -3956,7 +3956,7 @@ databaseChangeLog:
                   name: ID
                   value: 147
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COTTON"
               - column:
                   name: I18N
@@ -3983,7 +3983,7 @@ databaseChangeLog:
                   name: ID
                   value: 148
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CAMPHORACEOUS"
               - column:
                   name: I18N
@@ -4010,7 +4010,7 @@ databaseChangeLog:
                   name: ID
                   value: 149
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BAMBOO"
               - column:
                   name: I18N
@@ -4037,7 +4037,7 @@ databaseChangeLog:
                   name: ID
                   value: 150
               - column:
-                  name: NAME
+                  name: CODE
                   value: "TEAK"
               - column:
                   name: I18N
@@ -4064,7 +4064,7 @@ databaseChangeLog:
                   name: ID
                   value: 151
               - column:
-                  name: NAME
+                  name: CODE
                   value: "METALLIC"
               - column:
                   name: I18N
@@ -4091,7 +4091,7 @@ databaseChangeLog:
                   name: ID
                   value: 152
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MACADAMIA"
               - column:
                   name: I18N
@@ -4118,7 +4118,7 @@ databaseChangeLog:
                   name: ID
                   value: 153
               - column:
-                  name: NAME
+                  name: CODE
                   value: "KARITEA"
               - column:
                   name: I18N
@@ -4145,7 +4145,7 @@ databaseChangeLog:
                   name: ID
                   value: 154
               - column:
-                  name: NAME
+                  name: CODE
                   value: "POMEGRANATE"
               - column:
                   name: I18N
@@ -4172,7 +4172,7 @@ databaseChangeLog:
                   name: ID
                   value: 155
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MONOI"
               - column:
                   name: I18N
@@ -4199,7 +4199,7 @@ databaseChangeLog:
                   name: ID
                   value: 156
               - column:
-                  name: NAME
+                  name: CODE
                   value: "MINERAL"
               - column:
                   name: I18N
@@ -4226,7 +4226,7 @@ databaseChangeLog:
                   name: ID
                   value: 157
               - column:
-                  name: NAME
+                  name: CODE
                   value: "AMBRETTE"
               - column:
                   name: I18N
@@ -4253,7 +4253,7 @@ databaseChangeLog:
                   name: ID
                   value: 158
               - column:
-                  name: NAME
+                  name: CODE
                   value: "EVERLASTING"
               - column:
                   name: I18N
@@ -4280,7 +4280,7 @@ databaseChangeLog:
                   name: ID
                   value: 159
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CARAMEL"
               - column:
                   name: I18N
@@ -4307,7 +4307,7 @@ databaseChangeLog:
                   name: ID
                   value: 160
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ANGELICA"
               - column:
                   name: I18N
@@ -4334,7 +4334,7 @@ databaseChangeLog:
                   name: ID
                   value: 161
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BEESWAX"
               - column:
                   name: I18N
@@ -4361,7 +4361,7 @@ databaseChangeLog:
                   name: ID
                   value: 162
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PUMPKIN"
               - column:
                   name: I18N
@@ -4388,7 +4388,7 @@ databaseChangeLog:
                   name: ID
                   value: 163
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BUTTERY"
               - column:
                   name: I18N
@@ -4415,7 +4415,7 @@ databaseChangeLog:
                   name: ID
                   value: 164
               - column:
-                  name: NAME
+                  name: CODE
                   value: "PEPPERMINT"
               - column:
                   name: I18N
@@ -4442,7 +4442,7 @@ databaseChangeLog:
                   name: ID
                   value: 165
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BERRY"
               - column:
                   name: I18N
@@ -4469,7 +4469,7 @@ databaseChangeLog:
                   name: ID
                   value: 166
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHYPRE"
               - column:
                   name: I18N
@@ -4496,7 +4496,7 @@ databaseChangeLog:
                   name: ID
                   value: 167
               - column:
-                  name: NAME
+                  name: CODE
                   value: "RAISIN"
               - column:
                   name: I18N
@@ -4523,7 +4523,7 @@ databaseChangeLog:
                   name: ID
                   value: 168
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CARDAMOM"
               - column:
                   name: I18N
@@ -4550,7 +4550,7 @@ databaseChangeLog:
                   name: ID
                   value: 169
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CARNATION"
               - column:
                   name: I18N
@@ -4577,7 +4577,7 @@ databaseChangeLog:
                   name: ID
                   value: 170
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CARROT"
               - column:
                   name: I18N
@@ -4604,7 +4604,7 @@ databaseChangeLog:
                   name: ID
                   value: 171
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CASTOREUM"
               - column:
                   name: I18N
@@ -4631,7 +4631,7 @@ databaseChangeLog:
                   name: ID
                   value: 172
               - column:
-                  name: NAME
+                  name: CODE
                   value: "AMBERY"
               - column:
                   name: I18N
@@ -4658,7 +4658,7 @@ databaseChangeLog:
                   name: ID
                   value: 173
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CEDARWOOD"
               - column:
                   name: I18N
@@ -4685,7 +4685,7 @@ databaseChangeLog:
                   name: ID
                   value: 174
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHAMOMILE"
               - column:
                   name: I18N
@@ -4712,7 +4712,7 @@ databaseChangeLog:
                   name: ID
                   value: 175
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHARACTERISTIC"
               - column:
                   name: I18N
@@ -4739,7 +4739,7 @@ databaseChangeLog:
                   name: ID
                   value: 176
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHERRY"
               - column:
                   name: I18N
@@ -4766,7 +4766,7 @@ databaseChangeLog:
                   name: ID
                   value: 177
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CHOCOLATE"
               - column:
                   name: I18N
@@ -4793,7 +4793,7 @@ databaseChangeLog:
                   name: ID
                   value: 178
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CINNAMON"
               - column:
                   name: I18N
@@ -4820,7 +4820,7 @@ databaseChangeLog:
                   name: ID
                   value: 179
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CITRONELLA"
               - column:
                   name: I18N
@@ -4847,7 +4847,7 @@ databaseChangeLog:
                   name: ID
                   value: 180
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CITRUS"
               - column:
                   name: I18N
@@ -4874,7 +4874,7 @@ databaseChangeLog:
                   name: ID
                   value: 181
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CIVET"
               - column:
                   name: I18N
@@ -4901,7 +4901,7 @@ databaseChangeLog:
                   name: ID
                   value: 182
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CLARY SAGE"
               - column:
                   name: I18N
@@ -4928,7 +4928,7 @@ databaseChangeLog:
                   name: ID
                   value: 183
               - column:
-                  name: NAME
+                  name: CODE
                   value: "ANIMALIC"
               - column:
                   name: I18N
@@ -4955,7 +4955,7 @@ databaseChangeLog:
                   name: ID
                   value: 184
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CLOVE"
               - column:
                   name: I18N
@@ -4982,7 +4982,7 @@ databaseChangeLog:
                   name: ID
                   value: 185
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COCA COLA"
               - column:
                   name: I18N
@@ -5009,7 +5009,7 @@ databaseChangeLog:
                   name: ID
                   value: 186
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COCOA"
               - column:
                   name: I18N
@@ -5036,7 +5036,7 @@ databaseChangeLog:
                   name: ID
                   value: 187
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COCONUT"
               - column:
                   name: I18N
@@ -5063,7 +5063,7 @@ databaseChangeLog:
                   name: ID
                   value: 188
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COFFEE"
               - column:
                   name: I18N
@@ -5090,7 +5090,7 @@ databaseChangeLog:
                   name: ID
                   value: 189
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CONIFEROUS"
               - column:
                   name: I18N
@@ -5117,7 +5117,7 @@ databaseChangeLog:
                   name: ID
                   value: 190
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CORIANDER"
               - column:
                   name: I18N
@@ -5144,7 +5144,7 @@ databaseChangeLog:
                   name: ID
                   value: 191
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COSMETIC"
               - column:
                   name: I18N
@@ -5171,7 +5171,7 @@ databaseChangeLog:
                   name: ID
                   value: 192
               - column:
-                  name: NAME
+                  name: CODE
                   value: "COSTUS"
               - column:
                   name: I18N
@@ -5198,7 +5198,7 @@ databaseChangeLog:
                   name: ID
                   value: 193
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CREAMY"
               - column:
                   name: I18N
@@ -5225,7 +5225,7 @@ databaseChangeLog:
                   name: ID
                   value: 194
               - column:
-                  name: NAME
+                  name: CODE
                   value: "APPLE"
               - column:
                   name: I18N
@@ -5252,7 +5252,7 @@ databaseChangeLog:
                   name: ID
                   value: 195
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CRESOLIC"
               - column:
                   name: I18N
@@ -5279,7 +5279,7 @@ databaseChangeLog:
                   name: ID
                   value: 196
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CUCUMBER"
               - column:
                   name: I18N
@@ -5306,7 +5306,7 @@ databaseChangeLog:
                   name: ID
                   value: 197
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CUMIN"
               - column:
                   name: I18N
@@ -5333,7 +5333,7 @@ databaseChangeLog:
                   name: ID
                   value: 198
               - column:
-                  name: NAME
+                  name: CODE
                   value: "CYPRESS"
               - column:
                   name: I18N
@@ -5360,7 +5360,7 @@ databaseChangeLog:
                   name: ID
                   value: 199
               - column:
-                  name: NAME
+                  name: CODE
                   value: "EARTHY"
               - column:
                   name: I18N
@@ -5387,7 +5387,7 @@ databaseChangeLog:
                   name: ID
                   value: 200
               - column:
-                  name: NAME
+                  name: CODE
                   value: "EUCALYPTUS"
               - column:
                   name: I18N
@@ -5414,7 +5414,7 @@ databaseChangeLog:
                   name: ID
                   value: 201
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FATTY"
               - column:
                   name: I18N
@@ -5441,7 +5441,7 @@ databaseChangeLog:
                   name: ID
                   value: 202
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FIG"
               - column:
                   name: I18N
@@ -5468,7 +5468,7 @@ databaseChangeLog:
                   name: ID
                   value: 203
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FIG TREE"
               - column:
                   name: I18N
@@ -5495,7 +5495,7 @@ databaseChangeLog:
                   name: ID
                   value: 204
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FIR"
               - column:
                   name: I18N
@@ -5522,7 +5522,7 @@ databaseChangeLog:
                   name: ID
                   value: 205
               - column:
-                  name: NAME
+                  name: CODE
                   value: "APRICOT"
               - column:
                   name: I18N
@@ -5549,7 +5549,7 @@ databaseChangeLog:
                   name: ID
                   value: 206
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FLORAL"
               - column:
                   name: I18N
@@ -5576,7 +5576,7 @@ databaseChangeLog:
                   name: ID
                   value: 207
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FOUGERE"
               - column:
                   name: I18N
@@ -5603,7 +5603,7 @@ databaseChangeLog:
                   name: ID
                   value: 208
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FREESIA"
               - column:
                   name: I18N
@@ -5630,7 +5630,7 @@ databaseChangeLog:
                   name: ID
                   value: 209
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FRESH"
               - column:
                   name: I18N
@@ -5657,7 +5657,7 @@ databaseChangeLog:
                   name: ID
                   value: 210
               - column:
-                  name: NAME
+                  name: CODE
                   value: "FRUITY"
               - column:
                   name: I18N
@@ -5684,7 +5684,7 @@ databaseChangeLog:
                   name: ID
                   value: 211
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GALBANUM"
               - column:
                   name: I18N
@@ -5711,7 +5711,7 @@ databaseChangeLog:
                   name: ID
                   value: 212
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GARDENIA"
               - column:
                   name: I18N
@@ -5738,7 +5738,7 @@ databaseChangeLog:
                   name: ID
                   value: 213
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GERANIUM"
               - column:
                   name: I18N
@@ -5765,7 +5765,7 @@ databaseChangeLog:
                   name: ID
                   value: 214
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GINGER"
               - column:
                   name: I18N
@@ -5792,7 +5792,7 @@ databaseChangeLog:
                   name: ID
                   value: 215
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GINSENG"
               - column:
                   name: I18N
@@ -5819,7 +5819,7 @@ databaseChangeLog:
                   name: ID
                   value: 216
               - column:
-                  name: NAME
+                  name: CODE
                   value: "AQUEOUS"
               - column:
                   name: I18N
@@ -5846,7 +5846,7 @@ databaseChangeLog:
                   name: ID
                   value: 217
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GOURMAND"
               - column:
                   name: I18N
@@ -5873,7 +5873,7 @@ databaseChangeLog:
                   name: ID
                   value: 218
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GRAPE"
               - column:
                   name: I18N
@@ -5900,7 +5900,7 @@ databaseChangeLog:
                   name: ID
                   value: 219
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GRAPEFRUIT"
               - column:
                   name: I18N
@@ -5927,7 +5927,7 @@ databaseChangeLog:
                   name: ID
                   value: 220
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GREEN"
               - column:
                   name: I18N
@@ -5954,7 +5954,7 @@ databaseChangeLog:
                   name: ID
                   value: 221
               - column:
-                  name: NAME
+                  name: CODE
                   value: "GUAVA"
               - column:
                   name: I18N
@@ -5981,7 +5981,7 @@ databaseChangeLog:
                   name: ID
                   value: 222
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HAY"
               - column:
                   name: I18N
@@ -6008,7 +6008,7 @@ databaseChangeLog:
                   name: ID
                   value: 223
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HAZELNUT"
               - column:
                   name: I18N
@@ -6035,7 +6035,7 @@ databaseChangeLog:
                   name: ID
                   value: 224
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HELIOTROPE"
               - column:
                   name: I18N
@@ -6062,7 +6062,7 @@ databaseChangeLog:
                   name: ID
                   value: 225
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HERBACEOUS"
               - column:
                   name: I18N
@@ -6089,7 +6089,7 @@ databaseChangeLog:
                   name: ID
                   value: 226
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HONEY"
               - column:
                   name: I18N
@@ -6116,7 +6116,7 @@ databaseChangeLog:
                   name: ID
                   value: 227
               - column:
-                  name: NAME
+                  name: CODE
                   value: "AROMATIC"
               - column:
                   name: I18N
@@ -6143,7 +6143,7 @@ databaseChangeLog:
                   name: ID
                   value: 228
               - column:
-                  name: NAME
+                  name: CODE
                   value: "HYACINTH"
               - column:
                   name: I18N
@@ -6170,7 +6170,7 @@ databaseChangeLog:
                   name: ID
                   value: 229
               - column:
-                  name: NAME
+                  name: CODE
                   value: "INCENSE"
               - column:
                   name: I18N
@@ -6197,7 +6197,7 @@ databaseChangeLog:
                   name: ID
                   value: 230
               - column:
-                  name: NAME
+                  name: CODE
                   value: "JASMINE"
               - column:
                   name: I18N
@@ -6224,7 +6224,7 @@ databaseChangeLog:
                   name: ID
                   value: 231
               - column:
-                  name: NAME
+                  name: CODE
                   value: "JUNIPER BERRY"
               - column:
                   name: I18N
@@ -6251,7 +6251,7 @@ databaseChangeLog:
                   name: ID
                   value: 232
               - column:
-                  name: NAME
+                  name: CODE
                   value: "KIWI"
               - column:
                   name: I18N
@@ -6278,7 +6278,7 @@ databaseChangeLog:
                   name: ID
                   value: 233
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LABDANUM"
               - column:
                   name: I18N
@@ -6305,7 +6305,7 @@ databaseChangeLog:
                   name: ID
                   value: 234
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LACTONIC"
               - column:
                   name: I18N
@@ -6332,7 +6332,7 @@ databaseChangeLog:
                   name: ID
                   value: 235
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LAUREL"
               - column:
                   name: I18N
@@ -6359,7 +6359,7 @@ databaseChangeLog:
                   name: ID
                   value: 236
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LAVANDIN"
               - column:
                   name: I18N
@@ -6386,7 +6386,7 @@ databaseChangeLog:
                   name: ID
                   value: 237
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LAVENDER"
               - column:
                   name: I18N
@@ -6413,7 +6413,7 @@ databaseChangeLog:
                   name: ID
                   value: 238
               - column:
-                  name: NAME
+                  name: CODE
                   value: "BALSAMIC"
               - column:
                   name: I18N
@@ -6440,7 +6440,7 @@ databaseChangeLog:
                   name: ID
                   value: 239
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LEATHER"
               - column:
                   name: I18N
@@ -6467,7 +6467,7 @@ databaseChangeLog:
                   name: ID
                   value: 240
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LEMON"
               - column:
                   name: I18N
@@ -6494,7 +6494,7 @@ databaseChangeLog:
                   name: ID
                   value: 241
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LEMON BALM"
               - column:
                   name: I18N
@@ -6521,7 +6521,7 @@ databaseChangeLog:
                   name: ID
                   value: 242
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LEMONGRASS"
               - column:
                   name: I18N
@@ -6548,7 +6548,7 @@ databaseChangeLog:
                   name: ID
                   value: 243
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LILAC"
               - column:
                   name: I18N
@@ -6575,7 +6575,7 @@ databaseChangeLog:
                   name: ID
                   value: 244
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LILY OF THE VALLEY"
               - column:
                   name: I18N
@@ -6602,7 +6602,7 @@ databaseChangeLog:
                   name: ID
                   value: 245
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LIME"
               - column:
                   name: I18N
@@ -6629,7 +6629,7 @@ databaseChangeLog:
                   name: ID
                   value: 246
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LIQUOR"
               - column:
                   name: I18N
@@ -6656,7 +6656,7 @@ databaseChangeLog:
                   name: ID
                   value: 247
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LIQUORICE"
               - column:
                   name: I18N
@@ -6683,7 +6683,7 @@ databaseChangeLog:
                   name: ID
                   value: 248
               - column:
-                  name: NAME
+                  name: CODE
                   value: "LYCHEE"
               - column:
                   name: I18N
