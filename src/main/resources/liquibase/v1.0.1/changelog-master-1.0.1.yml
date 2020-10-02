@@ -87,3 +87,7 @@
     file: ddl/createFormulasOlfactiveNotesRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/addFamilyTables.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"

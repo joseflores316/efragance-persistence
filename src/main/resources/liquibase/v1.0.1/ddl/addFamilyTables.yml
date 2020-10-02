@@ -1,0 +1,208 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  add-tables-FAMILIES-v1.0.1 
+      author:  efragance
+      comment: "Create tables for family formula business"
+      tag: 1.0.1
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: FORMULA_FAMILY
+              tableName: FORMULA_SUB_FAMILY
+              tableName: FAMILIES_SUB_FAMILIES_REL
+              tableName: FORMULA_FAMILIES_REL
+      changes:  
+       -  createTable:  
+           tableName:  FORMULA_FAMILY
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_FORMULA_FAMILY
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  CODE
+                type:  varchar(50)
+                constraints:
+                  nullable: false
+                  unique: true
+                  uniqueConstraintName: UK_FORMULA_FAMILY_CODE
+       -  createTable:  
+           tableName:  FORMULA_SUB_FAMILY
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_FORMULA_SUB_FAMILY
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  CODE
+                type:  varchar(50)
+                constraints:
+                  nullable: false
+                  unique: true
+                  uniqueConstraintName: UK_FORMULA_SUB_FAMILY_CODE
+       -  createTable:  
+           tableName:  FAMILIES_SUB_FAMILIES_REL  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_FAMILIES_SUB_FAMILIES_REL
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false  
+           - column:
+                name: FAMILY_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FAMILIES_SUB_FAMILIES_REL_FAMILY_ID
+                  references: FORMULA_FAMILY(ID)
+           - column:
+                name: SUB_FAMILY_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FAMILIES_SUB_FAMILIES_REL_FORMULA_SUB_FAMILY_ID
+                  references: FORMULA_SUB_FAMILY(ID)
+       -  createTable:  
+           tableName:  FORMULAS_FAMILIES_REL  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_FORMULAS_FAMILIES_REL
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false
+           - column:
+                name: FORMULA_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FORMULAS_FAMILIES_REL_FORMULA_ID
+                  references: FORMULAS(ID)
+           - column:
+                name: FAMILY_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FORMULAS_FAMILIES_REL_FAMILY_ID
+                  references: FORMULA_FAMILY(ID)
+           - column:
+                name: SUB_FAMILY_ID
+                type: BIGINT
+                constraints:
+                  nullable: false
+                  foreignKeyName: FK_FORMULA_FAMILIES_REL_SUB_FAMILY_ID
+                  references: FORMULA_SUB_FAMILY(ID)
