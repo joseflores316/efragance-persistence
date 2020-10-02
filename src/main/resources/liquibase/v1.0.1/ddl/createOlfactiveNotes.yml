@@ -56,9 +56,6 @@ databaseChangeLog:
                   unique: true
                   uniqueConstraintName: UK_OLFACTIVE_NOTES_CODE
            -  column:  
-                name:  IMAGE_NAME
-                type:  varchar(50)
-           -  column:  
                 name:  I18N
                 type:  varchar(100)
                 constraints:
