@@ -91,3 +91,7 @@
     file: ddl/addFamilyTables.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaRawMaterialsView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
