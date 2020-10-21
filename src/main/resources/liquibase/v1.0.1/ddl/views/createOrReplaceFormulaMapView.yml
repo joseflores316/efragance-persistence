@@ -68,7 +68,7 @@ databaseChangeLog:
                          INNER JOIN RAW_MATERIALS rm ON rm.ID = frmr.RAW_MATERIAL_ID
                          UNION 
                          SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
-                               dr.RELATION_LEVEL + 1 AS `LEVEL`,'DILUTION_REL' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
+                               dr.RELATION_LEVEL + 2 AS `LEVEL`,'DILUTION_REL' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
                                dr.SUBDILUTION_ID AS `DILUTION_ID`, drmr.CODE AS `DILUTION_CODE`, drmr.NAME AS `DILUTION_NAME`, 
                                rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
                          FROM DILUTIONS d
