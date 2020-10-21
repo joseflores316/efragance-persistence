@@ -69,11 +69,16 @@ databaseChangeLog:
                          UNION 
                          SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
                                dr.RELATION_LEVEL + 1 AS `LEVEL`,'DILUTION_REL' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
-                                d.ID AS `DILUTION_ID`, d.CODE AS `DILUTION_CODE`, d.NAME AS `DILUTION_NAME`, 
+                               dr.SUBDILUTION_ID AS `DILUTION_ID`, drmr.CODE AS `DILUTION_CODE`, drmr.NAME AS `DILUTION_NAME`, 
                                rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
                          FROM DILUTIONS d
                          INNER JOIN DILUTIONS_REL dr ON dr.DILUTION_ID = d.ID 
-                         INNER JOIN DILUTIONS_RAW_MATERIALS_REL drmr ON drmr.DILUTION_ID = dr.SUBDILUTION_ID
+                         INNER JOIN 
+                         (
+                           SELECT drel.DILUTION_ID, d.CODE ,d.NAME ,drel.RAW_MATERIAL_ID 
+                           FROM DILUTIONS_RAW_MATERIALS_REL drel
+                           INNER JOIN DILUTIONS d ON d.ID = drel.DILUTION_ID
+                         ) drmr ON drmr.DILUTION_ID  = dr.SUBDILUTION_ID 
                          INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
                          INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.DILUTION_ID = d.ID 
                          INNER JOIN FORMULAS f ON f.ID = fdr.FORMULA_ID
