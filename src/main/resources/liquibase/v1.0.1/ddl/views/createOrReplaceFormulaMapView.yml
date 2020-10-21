@@ -72,7 +72,7 @@ databaseChangeLog:
                                 d.ID AS `DILUTION_ID`, d.CODE AS `DILUTION_CODE`, d.NAME AS `DILUTION_NAME`, 
                                rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
                          FROM DILUTIONS d
-                         INNER JOIN DILUTIONS_REL dr ON dr.SUBDILUTION_ID = d.ID 
+                         INNER JOIN DILUTIONS_REL dr ON dr.DILUTION_ID = d.ID 
                          INNER JOIN DILUTIONS_RAW_MATERIALS_REL drmr ON drmr.DILUTION_ID = dr.SUBDILUTION_ID
                          INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
                          INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.DILUTION_ID = d.ID 
