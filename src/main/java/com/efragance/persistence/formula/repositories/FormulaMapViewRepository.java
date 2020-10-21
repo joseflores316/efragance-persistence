@@ -10,7 +10,7 @@ import com.efragance.persistence.formula.models.FormulaRawMaterialRel;
  * The Interface FormulaRawMaterialViewRepository.
  */
 @Repository
-public interface FormulaRawMaterialViewRepository
+public interface FormulaMapViewRepository
         extends JpaRepository<FormulaRawMaterialRel, Long>, QuerydslPredicateExecutor<FormulaRawMaterialRel> {
 
 }

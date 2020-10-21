@@ -92,6 +92,6 @@
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: ddl/views/createOrReplaceFormulaRawMaterialsView.yml
+    file: ddl/views/createOrReplaceFormulaMapView.yml
     relativeToChangelogFile: true
     encoding: "utf8"
