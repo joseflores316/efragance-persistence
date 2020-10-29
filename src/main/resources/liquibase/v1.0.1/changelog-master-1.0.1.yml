@@ -95,3 +95,7 @@
     file: ddl/views/createOrReplaceFormulaMapView.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: dml/salesRole.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
