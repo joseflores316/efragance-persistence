@@ -99,3 +99,7 @@
     file: dml/salesRole.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: dml/defaultFamilyAndSubFamily.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"

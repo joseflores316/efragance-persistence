@@ -1,0 +1,85 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAUL_FAMILY_AND_SUB_FAMILY-v1.0.1
+      author: efragance
+      comment: "Insert default family and SUB family"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.1
+             label: initial
+        - insert:
+            tableName: FORMULA_FAMILY
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: CODE
+                  value: "TO BE DEFINED"
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  value: ${current.date}
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  value: ${current.date}
+              - column:
+                  name: VERSION
+                  value: 0
+        - insert:
+            tableName: FORMULA_SUB_FAMILY
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: CODE
+                  value: "TO BE DEFINED"
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  value: ${current.date}
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  value: ${current.date}
+              - column:
+                  name: VERSION
+                  value: 0
+        - insert:
+            tableName: FAMILIES_SUB_FAMILIES_REL
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: FAMILY_ID
+                  value: 1
+              - column:
+                  name: SUB_FAMILY_ID
+                  value: 1
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  value: ${current.date}
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  value: ${current.date}
+              - column:
+                  name: VERSION
+                  value: 0
+ 
