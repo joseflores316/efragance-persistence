@@ -27,7 +27,7 @@ public interface FormulaFamilyRelRepository
                 + "FROM FormulaFamilyRel ffrel "
                 + "INNER JOIN FormulaFamily ff ON ff.id = ffrel.familyId "
                 + "INNER JOIN FormulaSubFamily subff on subff.id = ffrel.subFamilyId "
-                + "WHERE ffrel.id = :formulaId")
+                + "WHERE ffrel.formulaId = :formulaId")
     // @formatter:on
     List<FormulaFamilyRelDescriptions> getFamiliesDescriptions(@Param(value = "formulaId") Long formulaId);
 
