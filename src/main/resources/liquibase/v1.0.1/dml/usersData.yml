@@ -1,0 +1,114 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-USERS-v1.0.1
+      author: efragance
+      comment: "Initialize admin User"
+      changes:
+        -  tagDatabase:  
+             tag:  1.0.1
+             label: initial
+        - insert:
+            tableName: USERS
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: USER_NAME
+                  value: "admin"
+              - column:
+                  name: PASSWORD
+                  value: "$2a$10$uTfG61odOYnaathOQXhQR.Q9xinHIj9ICmNiw86Td7WTp09BEks/u"
+              - column:
+                  name: NAME
+                  value: "Aname"
+              - column:
+                  name: SURNAME1
+                  value: "Asurname1"
+              - column:
+                  name: SURNAME2
+                  value: "Asurname2"
+              - column:
+                  name: ACTIVE
+                  valueBoolean: true
+              - column:
+                  name: LANG
+                  value: "es"
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  valueDate: ${current.date} 
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  valueDate: ${current.date} 
+              - column:
+                  name: VERSION
+                  value: 0
+        - insert:
+            tableName: ROLES
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: ROLE_NAME
+                  value: "ROLE_ADMIN"
+        - insert:
+            tableName: ROLES
+            columns:
+              - column:
+                  name: ID
+                  value: 2
+              - column:
+                  name: ROLE_NAME
+                  value: "ROLE_USER"
+        - insert:
+            tableName: USERS_ROLES
+            columns:
+              - column:
+                  name: USER_ID
+                  value: 1
+              - column:
+                  name: ROLE_ID
+                  value: 1
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  valueDate: ${current.date} 
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  valueDate: ${current.date} 
+        - insert:
+            tableName: USERS_ROLES
+            columns:
+              - column:
+                  name: USER_ID
+                  value: 1
+              - column:
+                  name: ROLE_ID
+                  value: 2
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  valueDate: ${current.date} 
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  valueDate: ${current.date} 
+
+
+

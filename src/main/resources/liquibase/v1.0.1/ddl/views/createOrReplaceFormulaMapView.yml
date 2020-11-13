@@ -1,0 +1,109 @@
+databaseChangeLog:
+  -  property:  
+      dbms:  h2  
+      name:  "rownumFrmView"  
+      value:  "rownum() as `ID`" 
+  -  property:  
+      dbms:  mysql,mariadb  
+      name:  "rownumFrmView"  
+      value:  "ROW_NUMBER() OVER (ORDER BY FORMULA_ID) as 'ID'" 
+  -  property:
+      dbms:  h2
+      name:  "alias"
+      value:  "" 
+  -  property:
+      dbms:  mysql,mariadb
+      name:  "alias"
+      value:  "query"
+  -  property:
+      dbms:  h2
+      name:  "castInt"
+      value:  "BIGINT" 
+  -  property:
+      dbms:  mysql,mariadb
+      name:  "castInt"
+      value:  "INTEGER"
+
+  - changeSet:  
+      id:  add-view-FORMULA_MAP_VIEW-v1.0.1 
+      author:  efragance
+      comment: "Create or replace the formula view responsible for facilitating queries"
+      tag: 1.0.1
+      changes:  
+       - createView:  
+           viewName:  FORMULA_MAP_VIEW
+           remarks: View to provide ease of reference against material data by formula
+           replaceIfExists: true
+           selectQuery: |
+                         SELECT  ${rownumFrmView}, `FORMULA_ID`,`FORMULA_CODE`,`FORMULA_NAME`,
+                                 CAST(CAST(`LEVEL` AS BINARY) AS ${castInt}) AS `LEVEL`,`ORIGIN`,`SUB_FORMULA_ID`,
+                                 `DILUTION_ID`,`DILUTION_CODE`,`DILUTION_NAME`,
+                                 `RAW_MATERIAL_ID`,`RAW_MATERIAL_CODE`,`RAW_MATERIAL_NAME`
+                         FROM 
+                         (SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               1 AS `LEVEL`,'RAW_MATERIAL' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
+                               NULL AS `DILUTION_ID`, NULL AS `DILUTION_CODE`, NULL AS `DILUTION_NAME`, 
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`
+                         FROM FORMULAS f 
+                         INNER JOIN FORMULAS_RAW_MATERIALS_REL frmr ON frmr.FORMULA_ID = f.ID
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = frmr.RAW_MATERIAL_ID
+                         UNION 
+                         SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               2 AS `LEVEL`,'DILUTION' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
+                               d.ID AS `DILUTION_ID` ,d.CODE AS `DILUTION_CODE`, d.NAME AS `DILUTION_NAME`, 
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME` 
+                         FROM FORMULAS f 
+                         INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.FORMULA_ID = f.ID 
+                         INNER JOIN DILUTIONS_RAW_MATERIALS_REL drmr ON drmr.DILUTION_ID  = fdr.ID 
+                         INNER JOIN DILUTIONS d ON d.ID = drmr.DILUTION_ID 
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
+                         UNION
+                         SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               fr.RELATION_LEVEL + 1 AS `LEVEL`,'FORMULA_REL' AS `ORIGIN`, fr.SUBFORMULA_ID,
+                               NULL AS `DILUTION_ID`, NULL AS `DILUTION_CODE`, NULL AS `DILUTION_NAME`, 
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`
+                         FROM FORMULAS f 
+                         INNER JOIN FORMULAS_REL fr ON fr.FORMULA_ID = f.ID
+                         INNER JOIN FORMULAS_RAW_MATERIALS_REL frmr ON frmr.FORMULA_ID = fr.SUBFORMULA_ID 
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = frmr.RAW_MATERIAL_ID
+                         UNION 
+                         SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               dr.RELATION_LEVEL + 2 AS `LEVEL`,'DILUTION_REL' AS `ORIGIN`, NULL AS `SUB_FORMULA_ID`,
+                               dr.SUBDILUTION_ID AS `DILUTION_ID`, drmr.CODE AS `DILUTION_CODE`, drmr.NAME AS `DILUTION_NAME`, 
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
+                         FROM DILUTIONS d
+                         INNER JOIN DILUTIONS_REL dr ON dr.DILUTION_ID = d.ID 
+                         INNER JOIN 
+                         (
+                           SELECT drel.DILUTION_ID, d.CODE ,d.NAME ,drel.RAW_MATERIAL_ID 
+                           FROM DILUTIONS_RAW_MATERIALS_REL drel
+                           INNER JOIN DILUTIONS d ON d.ID = drel.DILUTION_ID
+                         ) drmr ON drmr.DILUTION_ID  = dr.SUBDILUTION_ID 
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
+                         INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.DILUTION_ID = d.ID 
+                         INNER JOIN FORMULAS f ON f.ID = fdr.FORMULA_ID
+                         UNION
+                         SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               fr.RELATION_LEVEL + 2 AS `LEVEL`,'SUB_FORMULA_DILUTION_REL' AS `ORIGIN`, fr.SUBFORMULA_ID, 
+                                d.ID AS `DILUTION_ID`, d.CODE AS `DILUTION_CODE`, d.NAME AS `DILUTION_NAME`,
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
+                         FROM FORMULAS_REL fr
+                         INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.FORMULA_ID  = fr.SUBFORMULA_ID
+                         INNER JOIN DILUTIONS d ON d.ID = fdr.DILUTION_ID 
+                         INNER JOIN DILUTIONS_RAW_MATERIALS_REL drmr ON  d.ID = drmr.DILUTION_ID
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
+                         LEFT OUTER JOIN FORMULAS f ON f.ID = fr.FORMULA_ID
+                         UNION 
+                         SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               fr.RELATION_LEVEL + dr.RELATION_LEVEL + 2 AS `LEVEL`,'SUB_FORMULA_SUB_DILUTION_REL' AS `ORIGIN`, fr.SUBFORMULA_ID, 
+                                d.ID AS `DILUTION_ID`, d.CODE AS `DILUTION_CODE`, d.NAME AS `DILUTION_NAME`,
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`
+                         FROM FORMULAS_REL fr
+                         INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.FORMULA_ID  = fr.SUBFORMULA_ID
+                         LEFT OUTER JOIN DILUTIONS_REL dr ON dr.DILUTION_ID  = fdr.DILUTION_ID
+                         INNER JOIN DILUTIONS d ON d.ID = dr.SUBDILUTION_ID
+                         INNER JOIN DILUTIONS_RAW_MATERIALS_REL drmr ON  d.ID = drmr.DILUTION_ID
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
+                         LEFT OUTER JOIN FORMULAS f ON f.ID = fr.FORMULA_ID) ${alias}
+
+          

@@ -1,0 +1,105 @@
+﻿databaseChangeLog:
+- include:
+    file: ddl/createUsers.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createRoles.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createUsersRoles.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/usersData.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createAnnexes.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createApplications.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createSubstances.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createRawMaterials.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createDilutions.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulas.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createSapIntegrations.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createMaxDose.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createCertificates.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaSubstances.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createDilutionsRawMaterialRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulasRawMaterialRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulasDilutionsRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulasRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createDilutionsRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createOlfactiveNotes.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/olfactiveNotes.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulasOlfactiveNotesRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/addFamilyTables.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaMapView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/salesRole.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/defaultFamilyAndSubFamily.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"

@@ -1,0 +1,56 @@
+databaseChangeLog:
+  - changeSet:   
+      id:  create-table-ANNEXES-v1.0.1 
+      author:  efragance  
+      comment: "Create table ANNEXES"
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: ANNEXES
+      changes:  
+      -  tagDatabase:  
+           tag:  1.0.1
+      -  createTable:  
+           tableName:  ANNEXES  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_ANNEXES
+                  nullable: false
+           -  column:  
+                name:  CREATED_BY
+                type:  varchar(255)
+                constraints:
+                  nullable: false
+           -  column:  
+                name:  CREATED_DATE  
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_BY 
+                type:  varchar(255)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  MODIFIED_DATE
+                type:  datetime(6)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  VERSION
+                type:  bigint(20)
+                constraints:
+                  nullable: false  
+           -  column:  
+                name:  NAME
+                type:  varchar(20)
+                constraints:
+                  nullable: false
+                  unique: true
+                  uniqueConstraintName: UK_ANNEXES_ANNEXED

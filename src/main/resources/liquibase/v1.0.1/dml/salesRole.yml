@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-ROLE_SALES-v1.0.1
+      author: efragance
+      comment: "Add role for sales"
+      changes:
+        -  tagDatabase:  
+             tag:  1.0.1
+             label: initial
+        - insert:
+            tableName: ROLES
+            columns:
+              - column:
+                  name: ID
+                  value: 3
+              - column:
+                  name: ROLE_NAME
+                  value: "ROLE_SALES"
+        - insert:
+            tableName: USERS_ROLES
+            columns:
+              - column:
+                  name: USER_ID
+                  value: 1
+              - column:
+                  name: ROLE_ID
+                  value: 3
+              - column:
+                  name: CREATED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: CREATED_DATE
+                  valueDate: ${current.date} 
+              - column:
+                  name: MODIFIED_BY
+                  value: "SYSTEM"
+              - column:
+                  name: MODIFIED_DATE
+                  valueDate: ${current.date} 
+
+
+
