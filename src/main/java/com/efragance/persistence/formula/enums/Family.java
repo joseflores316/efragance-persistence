@@ -10,8 +10,8 @@ import com.efragance.arch.common.utils.ParamUtils;
  */
 public enum Family {
 
-    /** The to be define. */
-    TO_BE_DEFINE(1L, "TO_BE_DEFINE");
+    /** The to be determined. */
+    TO_BE_DETERMINED(1L, "TO BE DETERMINED");
 
     /** The Constant MAPPING_BY_ID. */
     private static final ConcurrentHashMap<Long, Family> MAPPING_BY_ID = new ConcurrentHashMap<>();

@@ -13,10 +13,24 @@ public interface FormulaFamilyRelDescriptions {
     String getFamilyCode();
 
     /**
+     * Gets the family I 18 n.
+     *
+     * @return the family I 18 n
+     */
+    String getFamilyI18n();
+
+    /**
      * Gets the sub family code.
      *
      * @return the sub family code
      */
     String getSubFamilyCode();
+
+    /**
+     * Gets the sub family I 18 n.
+     *
+     * @return the sub family I 18 n
+     */
+    String getSubFamilyI18n();
 
 }

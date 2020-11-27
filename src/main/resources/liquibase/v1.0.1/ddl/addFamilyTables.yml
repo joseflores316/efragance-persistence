@@ -56,6 +56,12 @@ databaseChangeLog:
                   nullable: false
                   unique: true
                   uniqueConstraintName: UK_FORMULA_FAMILY_CODE
+           -  column:  
+                name:  I18N
+                type:  varchar(100)
+                defaultValue: "family.not.exist"
+                constraints:
+                  nullable: false
        -  createTable:  
            tableName:  FORMULA_SUB_FAMILY
            columns:
@@ -99,6 +105,12 @@ databaseChangeLog:
                   nullable: false
                   unique: true
                   uniqueConstraintName: UK_FORMULA_SUB_FAMILY_CODE
+           -  column:  
+                name:  I18N
+                type:  varchar(100)
+                defaultValue: "subfamily.not.exist"
+                constraints:
+                  nullable: false
        -  createTable:  
            tableName:  FAMILIES_SUB_FAMILIES_REL  
            columns:
