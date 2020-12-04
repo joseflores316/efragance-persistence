@@ -107,3 +107,7 @@
     file: dml/subfamilies.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: dml/newOlfactiveNotes.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
