@@ -1,0 +1,40 @@
+databaseChangeLog:
+  -  property:  
+      dbms:  h2  
+      name:  "rownumFrmView"  
+      value:  "rownum() as `ID`" 
+  -  property:  
+      dbms:  mysql,mariadb  
+      name:  "rownumFrmView"  
+      value:  "ROW_NUMBER() OVER (ORDER BY FORMULA_ID) as 'ID'" 
+  -  property:
+      dbms:  h2
+      name:  "castInt"
+      value:  "BIGINT" 
+  -  property:
+      dbms:  mysql,mariadb
+      name:  "castInt"
+      value:  "INTEGER"
+
+  - changeSet:  
+      id:  add-view-FORMULA_LEVEL_RAW_MATERIAL_VIEW-v1.0.1 
+      author:  efragance
+      comment: "Create or replace the formula view responsible for facilitating queries"
+      tag: 1.0.1
+      changes:  
+       - createView:  
+           viewName:  FORMULA_LEVEL_RAW_MATERIAL_VIEW
+           remarks: View to provide easy of reference against material data by formula
+           replaceIfExists: true
+           selectQuery: |
+                         SELECT  ${rownumFrmView}, `FORMULA_ID`,`FORMULA_CODE`,`FORMULA_NAME`,
+                                 CAST(CAST(`LEVEL` AS BINARY) AS ${castInt}) AS `LEVEL`,`ORIGIN`,
+                                 `RAW_MATERIAL_ID`,`RAW_MATERIAL_CODE`,`RAW_MATERIAL_NAME`
+                         FROM 
+                         (SELECT f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               1 AS `LEVEL`,'RAW_MATERIAL' AS `ORIGIN`,
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`
+                         FROM FORMULAS f 
+                         INNER JOIN FORMULAS_RAW_MATERIALS_REL frmr ON frmr.FORMULA_ID = f.ID
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = frmr.RAW_MATERIAL_ID) ${alias}
+          

@@ -111,3 +111,31 @@
     file: dml/newOlfactiveNotes.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelDilutionView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelFormulaRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelRawMaterialView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelSubFormulaDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelSubFormulaSubDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/dropFormulaMapView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"

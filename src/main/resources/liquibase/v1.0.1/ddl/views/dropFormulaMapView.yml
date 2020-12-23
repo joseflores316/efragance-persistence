@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  dropView-FORMULA_MAP_VIEW-v1.0.1  
+      author:  efragance  
+      comment: "This view is not efficient"
+      tag: 1.0.1
+      changes:  
+      -  dropView:  
+           viewName:  FORMULA_MAP_VIEW
+
+          

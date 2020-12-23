@@ -1,0 +1,45 @@
+databaseChangeLog:
+  -  property:  
+      dbms:  h2  
+      name:  "rownumFrmView"  
+      value:  "rownum() as `ID`" 
+  -  property:  
+      dbms:  mysql,mariadb  
+      name:  "rownumFrmView"  
+      value:  "ROW_NUMBER() OVER (ORDER BY FORMULA_ID) as 'ID'" 
+  -  property:
+      dbms:  h2
+      name:  "castInt"
+      value:  "BIGINT" 
+  -  property:
+      dbms:  mysql,mariadb
+      name:  "castInt"
+      value:  "INTEGER"
+
+  - changeSet:  
+      id:  add-view-FORMULA_LEVEL_DILUTION_REL_VIEW-v1.0.1 
+      author:  efragance
+      comment: "Create or replace the formula view responsible for facilitating queries"
+      tag: 1.0.1
+      changes:  
+       - createView:  
+           viewName:  FORMULA_LEVEL_DILUTION_REL_VIEW
+           remarks: View to provide easy of reference against material and dilution in dilution rel
+           replaceIfExists: true
+           selectQuery: |
+                         SELECT ${rownumFrmView}, f.ID as `FORMULA_ID`,f.CODE AS `FORMULA_CODE`,f.NAME AS `FORMULA_NAME`,
+                               CAST(CAST(dr.RELATION_LEVEL + 2 AS BINARY) AS ${castInt}) AS `LEVEL`,'DILUTION_REL' AS `ORIGIN`,
+                               dr.SUBDILUTION_ID AS `DILUTION_ID`, drmr.CODE AS `DILUTION_CODE`, drmr.NAME AS `DILUTION_NAME`, 
+                               rm.ID AS `RAW_MATERIAL_ID`,rm.CODE AS `RAW_MATERIAL_CODE`,rm.NAME AS `RAW_MATERIAL_NAME`  
+                         FROM DILUTIONS d
+                         INNER JOIN DILUTIONS_REL dr ON dr.DILUTION_ID = d.ID 
+                         INNER JOIN 
+                         (
+                           SELECT drel.DILUTION_ID, d.CODE ,d.NAME ,drel.RAW_MATERIAL_ID 
+                           FROM DILUTIONS_RAW_MATERIALS_REL drel
+                           INNER JOIN DILUTIONS d ON d.ID = drel.DILUTION_ID
+                         ) drmr ON drmr.DILUTION_ID  = dr.SUBDILUTION_ID 
+                         INNER JOIN RAW_MATERIALS rm ON rm.ID = drmr.RAW_MATERIAL_ID
+                         INNER JOIN FORMULAS_DILUTIONS_REL fdr ON fdr.DILUTION_ID = d.ID 
+                         INNER JOIN FORMULAS f ON f.ID = fdr.FORMULA_ID
+          
