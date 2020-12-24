@@ -45,5 +45,4 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
            ,nativeQuery = true)
     // @formatter:on
     Set<Long> getIdFormulasByRelationLevel(@Param(value = "level") int level);
-
 }
