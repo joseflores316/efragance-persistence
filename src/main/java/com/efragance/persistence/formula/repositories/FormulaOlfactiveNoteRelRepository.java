@@ -21,8 +21,12 @@ public interface FormulaOlfactiveNoteRelRepository
             " WHERE rel.formulaId IN ( "
                               + "SELECT formu.id "
                               + "FROM Formula formu "
-                              + "INNER JOIN SapIntegration sap ON formu.id = sap.formulaId "
-                              + "WHERE lower(formu.code) = lower(:searchCode) or lower(sap.sapCode) = lower(:searchCode)"
+                              + "WHERE lower(formu.code) = lower(:searchCode)"
+                              + ")"
+                  + " OR rel.formulaId IN ( "
+                              + "SELECT sapi.formulaId "
+                              + "FROM SapIntegration sapi "
+                              + "WHERE lower(sapi.sapCode) = lower(:searchCode)"
                               + ")"
     )
      // @formatter:on
