@@ -32,4 +32,12 @@ public interface FormulaOlfactiveNoteRelRepository
      // @formatter:on
     List<FormulaOlfactiveNoteRel> findByFormulaCodes(@Param(value = "searchCode") String searchCode);
 
+    /**
+     * Find by formula id.
+     *
+     * @param formulaId the formula id
+     * @return the list
+     */
+    List<FormulaOlfactiveNoteRel> findByFormulaId(Long formulaId);
+
 }

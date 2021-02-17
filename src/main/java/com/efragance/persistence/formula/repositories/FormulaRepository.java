@@ -45,4 +45,17 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
            ,nativeQuery = true)
     // @formatter:on
     Set<Long> getIdFormulasByRelationLevel(@Param(value = "level") int level);
+
+ // @formatter:off
+    @Query(value = "SELECT formu" +
+            " FROM  Formula formu " +
+            " WHERE lower(formu.code) = lower(:searchCode)"
+                + " OR formu.id = ( "
+                              + "SELECT sapi.formulaId "
+                              + "FROM SapIntegration sapi "
+                              + "WHERE lower(sapi.sapCode) = lower(:searchCode)"
+                              + ")"
+    )
+     // @formatter:on
+    Optional<Formula> findByCodeOrSapCode(@Param(value = "searchCode") String searchCode);
 }
