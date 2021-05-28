@@ -46,7 +46,7 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
     // @formatter:on
     Set<Long> getIdFormulasByRelationLevel(@Param(value = "level") int level);
 
- // @formatter:off
+    // @formatter:off
     @Query(value = "SELECT formu" +
             " FROM  Formula formu " +
             " WHERE lower(formu.code) = lower(:searchCode)"
@@ -56,6 +56,7 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
                               + "WHERE lower(sapi.sapCode) = lower(:searchCode)"
                               + ")"
     )
-     // @formatter:on
+    // @formatter:on
     Optional<Formula> findByCodeOrSapCode(@Param(value = "searchCode") String searchCode);
+
 }
