@@ -38,6 +38,20 @@ public interface CertificateBasicInfo {
     String getFormulaName();
 
     /**
+     * Gets the formula code.
+     *
+     * @return the formula code
+     */
+    String getFormulaCode();
+
+    /**
+     * Gets the sap code.
+     *
+     * @return the sap code
+     */
+    String getSapCode();
+
+    /**
      * Gets the application id.
      *
      * @return the application id

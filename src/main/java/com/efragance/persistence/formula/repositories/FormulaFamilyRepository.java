@@ -11,4 +11,12 @@ import com.efragance.persistence.formula.models.FormulaFamily;
 public interface FormulaFamilyRepository
         extends BaseRepository<FormulaFamily, Long>, QuerydslPredicateExecutor<FormulaFamily> {
 
+    /**
+     * Find by code.
+     *
+     * @param code the code
+     * @return the formula family
+     */
+    FormulaFamily findByCode(String code);
+
 }

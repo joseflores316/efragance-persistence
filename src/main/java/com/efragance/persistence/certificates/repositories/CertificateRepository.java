@@ -17,8 +17,9 @@ public interface CertificateRepository
         extends BaseRepository<Certificate, Long>, QuerydslPredicateExecutor<Certificate> {
 
     // @formatter:off
-    @Query(value = "SELECT cert.ID as Id,cert.TYPE as Type,f.Id as FormulaId,f.NAME as FormulaName,"
-            + "ms.DOSE as Dose,app.ID as ApplicationId, app.NAME as ApplicationName" +
+    @Query(value = "SELECT cert.ID as Id,cert.TYPE as Type,f.Id as FormulaId,f.NAME as FormulaName, f.CODE as FormulaCode,"
+            + "ms.DOSE as Dose,app.ID as ApplicationId, app.NAME as ApplicationName," +
+            "si.SAP_CODE as SapCode" +
             " FROM  CERTIFICATES cert " +
             " INNER JOIN MAX_DOSE ms" +
                   " ON cert.MAX_DOSE_ID = ms.ID" +
@@ -26,6 +27,7 @@ public interface CertificateRepository
                   " ON app.ID = ms.APPLICATION_ID" +
             " INNER JOIN FORMULAS f" +
                   " ON ms.FORMULA_ID = f.ID" +
+            " LEFT JOIN SAP_INTEGRATIONS si ON si.FORMULA_ID = f.ID" +
          " WHERE cert.ID = :certificateId"
            ,nativeQuery = true)
     // @formatter:on

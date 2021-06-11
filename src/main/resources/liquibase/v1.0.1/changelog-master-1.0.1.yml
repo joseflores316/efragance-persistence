@@ -100,6 +100,46 @@
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-    file: dml/defaultFamilyAndSubFamily.yml
+    file: dml/families.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/subfamilies.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/newOlfactiveNotes.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelDilutionView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelFormulaRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelRawMaterialView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelSubFormulaDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/createOrReplaceFormulaLevelSubFormulaSubDilutionRelView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/dropFormulaMapView.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/views/dropFormulaLevelViews.yml
     relativeToChangelogFile: true
     encoding: "utf8"
