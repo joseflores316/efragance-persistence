@@ -6,6 +6,14 @@ package com.efragance.persistence.formula.projections;
 public interface FormulaFamilyRelDescriptions {
 
     /**
+     * Gets the family id.
+     *
+     * @return the family id
+     */
+
+    Long getFamilyId();
+
+    /**
      * Gets the family code.
      *
      * @return the family code
@@ -18,6 +26,13 @@ public interface FormulaFamilyRelDescriptions {
      * @return the family I 18 n
      */
     String getFamilyI18n();
+
+    /**
+     * Gets the subfamily id.
+     *
+     * @return the subfamily id
+     */
+    Long getSubFamilyId();
 
     /**
      * Gets the sub family code.

@@ -23,7 +23,8 @@ public interface FormulaFamilyRelRepository
      * @return the families descriptions
      */
     // @formatter:off
-    @Query(value= "SELECT ff.code as familyCode,ff.i18n as familyI18n, subff.code as subFamilyCode, subff.i18n as subFamilyI18n "
+    @Query(value= "SELECT ff.id as familyId,ff.code as familyCode,ff.i18n as familyI18n, "
+                + "subff.id as subFamilyId,subff.code as subFamilyCode, subff.i18n as subFamilyI18n "
                 + "FROM FormulaFamilyRel ffrel "
                 + "INNER JOIN FormulaFamily ff ON ff.id = ffrel.familyId "
                 + "INNER JOIN FormulaSubFamily subff on subff.id = ffrel.subFamilyId "
