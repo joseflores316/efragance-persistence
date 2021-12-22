@@ -32,4 +32,13 @@ public interface RawMaterialRepository
      */
     Optional<RawMaterial> findByNameAndIdNot(String name, Long rawMaterialId);
 
+    /**
+     * Find by code
+     *
+     * @param code the code
+     * @return the optional
+     */
+
+    Optional<RawMaterial> findByCode(String code);
+
 }
