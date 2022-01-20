@@ -1,5 +1,7 @@
 package com.efragance.persistence.formula.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +15,7 @@ import com.efragance.persistence.formula.models.DilutionRawMaterialRel;
 public interface DilutionRawMaterialRelRepository
         extends BaseRepository<DilutionRawMaterialRel, Long>, QuerydslPredicateExecutor<DilutionRawMaterialRel> {
 
+    long countByDilutionIdAndRawMaterialId(long dilutionId, long rawMaterialId);
+
+    Optional<DilutionRawMaterialRel> findByDilutionIdAndRawMaterialId(long dilutionId, long rawMaterialId);
 }
