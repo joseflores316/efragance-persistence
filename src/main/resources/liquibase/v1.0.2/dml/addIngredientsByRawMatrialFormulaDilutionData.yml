@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-INGREDIENTS-v1.0.2
+      author: efragance
+      comment: "Insert ingredients"
+      changes:
+        -  tagDatabase:  
+             tag:  1.0.2
+             label: initial
+        -   sql: 
+              sql:  INSERT
+                      INTO
+                      INGREDIENTS (ID_EXTERNAL,
+                      `TYPE`
+                      )
+                    SELECT
+                      ID,
+                      "RW" AS `TYPE`                     
+                    FROM
+                      RAW_MATERIALS
+        -   sql:           
+             sql:  
+                   INSERT
+                      INTO
+                      INGREDIENTS (ID_EXTERNAL,
+                     `TYPE`
+                      )
+                  SELECT
+                      ID,
+                      "F" AS `TYPE`
+                  FROM
+                      FORMULAS 
+        -   sql:           
+              sql:  
+                  INSERT
+                      INTO
+                      INGREDIENTS (ID_EXTERNAL,
+                      `TYPE`
+                      )
+                    SELECT
+                       ID,
+                      "D" AS `TYPE`
+                   FROM
+                      DILUTIONS 
+  
+  
+                
+        
+                  
+         
+        
+
+

@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  create-table-INGREDIENTS-v1.0.2 
+      author:  efragance
+      comment: "Create table INGREDIENTS"
+      tag: 1.0.2
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: INGREDIENTS
+      changes:  
+       -  tagDatabase:  
+           tag:  1.0.2
+       -  createTable:  
+           tableName:  INGREDIENTS  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_INGREDIENTS
+                  nullable: false                  
+           - column:
+                name: ID_EXTERNAL
+                type: BIGINT     
+                constraints:
+                  nullable: false                      
+           -  column:  
+                name:  TYPE
+                type:  varchar(5)
+                constraints:
+                  nullable: false
+        
+         
