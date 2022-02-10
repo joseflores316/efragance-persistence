@@ -17,17 +17,9 @@ import com.efragance.persistence.formula.models.Ingredient;
 public interface IngredientRepository extends BaseRepository<Ingredient, Long>, QuerydslPredicateExecutor<Ingredient> {
 
     @Query(nativeQuery = true)
-    List<IngredientListDto> findAllIngredient();
+    List<IngredientListDto> findRawMaterials();
 
-    // @formatter:off
-    @Query(nativeQuery = true, value = "SELECT  frmr.RAW_MATERIAL_ID  FROM FORMULAS_RAW_MATERIALS_REL frmr "
-                 + "LEFT JOIN RAW_MATERIALS rm ON frmr.RAW_MATERIAL_ID = rm.ID  "
-                 + "GROUP BY frmr.RAW_MATERIAL_ID "
-                 + "ORDER BY frmr.RAW_MATERIAL_ID "
-                 + "Limit 8"
-    )
-     // @formatter:on
-
-    List<Long> findRawMaterialIdGroupBy();
+    @Query(nativeQuery = true)
+    List<IngredientListDto> findDilutions();
 
 }
