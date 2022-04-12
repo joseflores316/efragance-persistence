@@ -13,3 +13,6 @@
 - include:
     file: v1.0.2/changelog-master-1.0.2.yml
     relativeToChangelogFile: true
+- include:
+    file: v1.0.3/changelog-master-1.0.3.yml
+    relativeToChangelogFile: true

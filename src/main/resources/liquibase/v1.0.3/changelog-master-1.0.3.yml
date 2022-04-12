@@ -1,0 +1,19 @@
+﻿databaseChangeLog:
+- include:
+    file: ddl/createI18n.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
+    file: ddl/createBaseAttr.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
+    file: ddl/createAttrType.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"    
+- include:
+    file: ddl/createIngredientAttr.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"    
+
+
