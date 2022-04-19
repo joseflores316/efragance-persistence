@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  create-table-I18N-v1.0.3
+      author:  efragance
+      comment: "Create table I18N"
+      tag: 1.0.3
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: I18N
+      changes:  
+       -  tagDatabase:  
+           tag:  1.0.3
+       -  createTable:  
+           tableName:  I18N  
+           columns:
+           -  column:  
+                name:  ID  
+                type:  bigint(20)
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: PK_I18N
+                  nullable: false
+           -  column:  
+                name:  TAG_I18N
+                type:  varchar(100)                
+                constraints:                
+                  nullable: false                       
+           -  column:
+                name: TEXT
+                type: varchar(100)
+                constraints:
+                  nullable: false
+           -  column:
+                name: LOCALE
+                type: varchar(2)
+                constraints:
+                  nullable: false         
+                  
+                  
