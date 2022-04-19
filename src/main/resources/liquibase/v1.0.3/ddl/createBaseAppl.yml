@@ -1,19 +1,19 @@
 databaseChangeLog:
   - changeSet:  
-      id:  create-table-BASE_ATTR-v1.0.3
+      id:  create-table-BASE_APPL-v1.0.3
       author:  efragance
-      comment: "Create table BASE ATTR"
+      comment: "Create table BASE APPL"
       tag: 1.0.3
       preConditions:
         - onFail: MARK_RAN
           not:
             tableExists:
-              tableName: BASE_ATTR
+              tableName: BASE_APPL
       changes:  
        -  tagDatabase:  
            tag:  1.0.3
        -  createTable:  
-           tableName:  BASE_ATTR 
+           tableName:  BASE_APPL 
            columns:
            -  column:  
                 name:  ID  
@@ -29,8 +29,8 @@ databaseChangeLog:
                 constraints:
                   nullable: false         
            - column:
-                name: TEXT
-                type: varchar(100)
+                name: TYPE
+                type: varchar(50)
                 constraints:
                   nullable: false
            - column:

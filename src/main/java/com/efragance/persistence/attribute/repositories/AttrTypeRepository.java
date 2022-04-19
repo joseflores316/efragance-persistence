@@ -1,4 +1,4 @@
-package com.efragance.persistence.formula.repositories;
+package com.efragance.persistence.attribute.repositories;
 
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;

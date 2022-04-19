@@ -1,5 +1,7 @@
 package com.efragance.persistence.formula.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +15,5 @@ import com.efragance.persistence.formula.models.IngredientAttr;
 public interface IngredientAttrRepository
         extends BaseRepository<IngredientAttr, Long>, QuerydslPredicateExecutor<IngredientAttr> {
 
+    Optional<IngredientAttr> findByAttrTypeId(Long attrTypeId);
 }

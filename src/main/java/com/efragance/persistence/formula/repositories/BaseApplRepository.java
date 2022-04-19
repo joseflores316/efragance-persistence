@@ -4,12 +4,12 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.formula.models.BaseAttr;
+import com.efragance.persistence.formula.models.BaseAppl;
 
 /**
- * The Interface BaseAttrRepository .
+ * The Interface BaseApplRepository .
  */
 @Repository
-public interface BaseAttrRepository extends BaseRepository<BaseAttr, Long>, QuerydslPredicateExecutor<BaseAttr> {
+public interface BaseApplRepository extends BaseRepository<BaseAppl, Long>, QuerydslPredicateExecutor<BaseAppl> {
 
 }

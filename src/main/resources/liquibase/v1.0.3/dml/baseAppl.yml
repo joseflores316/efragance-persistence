@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_BASE_APPL-v1.0.3
+      author: efragance
+      comment: "Insert default families"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.3
+             label: initial
+        - insert:
+            tableName: BASE_APPL
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "PC-SKINC-Shower Gel"
+              - column:
+                  name: TYPE
+                  value: "TYPE1"
+              - column:
+                  name: CATEGORY
+                  value: "CATEGORY1"             
+        - insert:
+            tableName: BASE_APPL
+            columns:
+                - column:
+                    name: ID
+                    value: 2
+                - column:
+                    name: TAG_I18N
+                    value: "FF-ALC-Body Splash"
+                - column:
+                    name: TYPE
+                    value: "TYPE1"
+                - column:
+                    name: CATEGORY
+                    value: "CATEGORY1"
+        - insert:
+            tableName: BASE_APPL
+            columns:
+                - column:
+                    name: ID
+                    value: 3
+                - column:
+                    name: TAG_I18N
+                    value: "FF-ALC-Kids Perfumery MM"
+                - column:
+                    name: TYPE
+                    value: "TYPE1"
+                - column:
+                    name: CATEGORY
+                    value: "CATEGORY1"          
+             
+                  
+                  
+               
+                  
+                 

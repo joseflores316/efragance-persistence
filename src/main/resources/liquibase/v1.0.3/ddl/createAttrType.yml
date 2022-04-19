@@ -29,7 +29,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     foreignKeyName: FK_ATTR_TYPE_BASE
-                    references: BASE_ATTR(ID)
+                    references: BASE_APPL(ID)
              -  column:  
                   name:  TAG_I18N
                   type:  varchar(100)        
