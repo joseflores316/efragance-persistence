@@ -22,7 +22,7 @@ databaseChangeLog:
                    primaryKey: true
                    primaryKeyName: PK_INGREDIENT_ATTR
                    nullable: false
-                   foreignKeyName: FK_INGREDIENT_ATTR_INGREDIENT_ID
+                   foreignKeyName: FK_INGREDIENT_ATTR_INGREDIENT_EXTERNAL
                    references: INGREDIENTS(ID)
            -  column:  
                  name:  ATTR_TYPE_ID  
@@ -31,7 +31,7 @@ databaseChangeLog:
                    primaryKey: true
                    primaryKeyName: PK_INGREDIENT_ATTR
                    nullable: false
-                   foreignKeyName: INGREDIENT_ATTR_ATTR_TYPE
+                   foreignKeyName: FK_INGREDIENT_ATTR_ATTR_TYPE
                    references: ATTR_TYPE(ID)    
            - column:
                 name: VALUE

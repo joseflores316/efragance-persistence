@@ -4,6 +4,10 @@
     relativeToChangelogFile: true
     encoding: "utf8" 
 - include:
+    file: dml/i18n.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
     file: ddl/createBaseAppl.yml
     relativeToChangelogFile: true
     encoding: "utf8" 
@@ -13,6 +17,10 @@
     encoding: "utf8" 
 - include:
     file: ddl/createAttrType.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"    
+- include:
+    file: dml/attrType.yml
     relativeToChangelogFile: true
     encoding: "utf8"    
 - include:
