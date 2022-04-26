@@ -1,0 +1,91 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_ATTR_TYPE-v1.0.3
+      author: efragance
+      comment: "Insert default attr type"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.3
+             label: initial
+        - insert:
+            tableName: ATTR_TYPE
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: BASE_ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.1"
+              - column:
+                  name: VALUE_TYPE
+                  value: "TEXT"       
+              - column:
+                  name: SECTION
+                  value: "APPLICATION"   
+            
+        - insert:
+            tableName: ATTR_TYPE
+            columns:
+              - column:
+                  name: ID
+                  value: 2
+              - column:
+                  name: BASE_ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.2"
+              - column:
+                  name: VALUE_TYPE
+                  value: "NUMBER"       
+              - column:
+                  name: SECTION
+                  value: "EVALUATION"   
+                                    
+        - insert:
+            tableName: ATTR_TYPE
+            columns:
+              - column:
+                  name: ID
+                  value: 3
+              - column:
+                  name: BASE_ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.3"
+              - column:
+                  name: VALUE_TYPE
+                  value: "DATE"       
+              - column:
+                  name: SECTION
+                  value: "STABILITY"  
+                  
+        - insert:
+            tableName: ATTR_TYPE
+            columns:
+              - column:
+                  name: ID
+                  value: 4
+              - column:
+                  name: BASE_ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.4"
+              - column:
+                  name: VALUE_TYPE
+                  value: "DECIMAL"       
+              - column:
+                  name: SECTION
+                  value: "STABILITY"        
+            
+             
+                  
+                  
+               
+                  
+                 

@@ -25,7 +25,7 @@ databaseChangeLog:
                   nullable: false                  
            - column:
                 name: ID_EXTERNAL
-                type: BIGINT     
+                type: bigint(20)     
                 constraints:
                   nullable: false                      
            -  column:  

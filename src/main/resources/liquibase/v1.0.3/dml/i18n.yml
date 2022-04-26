@@ -1,0 +1,79 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_I18N-v1.0.3
+      author: efragance
+      comment: "Insert default I18N"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.3
+             label: initial
+        - insert:
+            tableName: I18N
+            columns:
+              - column:
+                  name: ID
+                  value: 1            
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.1"
+              - column:
+                  name: TEXT
+                  value: "SOLUCION"       
+              - column:
+                  name: LOCALE
+                  value: "EN"   
+            
+        - insert:
+            tableName: I18N
+            columns:
+              - column:
+                  name: ID
+                  value: 2           
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.2"
+              - column:
+                  name: TEXT
+                  value: "BLOOMING (0-5)"       
+              - column:
+                  name: LOCALE
+                  value: "EN"   
+                                    
+        - insert:
+            tableName: I18N
+            columns:
+              - column:
+                  name: ID
+                  value: 3           
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.3"
+              - column:
+                  name: TEXT
+                  value: "t=0 DATE"       
+              - column:
+                  name: LOCALE
+                  value: "EN"    
+                  
+        - insert:
+            tableName: I18N
+            columns:
+              - column:
+                  name: ID
+                  value: 4         
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.4"
+              - column:
+                  name: TEXT
+                  value: "DECIMAL"       
+              - column:
+                  name: LOCALE
+                  value: "EN"      
+            
+             
+                  
+                  
+               
+                  
+                 

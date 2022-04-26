@@ -16,4 +16,6 @@ public interface IngredientAttrRepository
         extends BaseRepository<IngredientAttr, Long>, QuerydslPredicateExecutor<IngredientAttr> {
 
     Optional<IngredientAttr> findByAttrTypeId(Long attrTypeId);
+
+    Optional<IngredientAttr> findByIngredientIdAndAttrTypeId(Long ingredientId, Long attrTypeId);
 }
