@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.formula.models.Formula;
+import com.efragance.persistence.models.Formula;
 
 /**
  * The Interface FormulaRepository.

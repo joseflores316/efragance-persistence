@@ -6,7 +6,7 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.i18n.models.I18n;
+import com.efragance.persistence.models.I18n;
 
 /**
  * The Interface I18nRepository.

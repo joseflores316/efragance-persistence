@@ -2,7 +2,7 @@ package com.efragance.persistence.certificates.projections;
 
 import java.math.BigDecimal;
 
-import com.efragance.persistence.certificates.models.CertificateType;
+import com.efragance.persistence.models.CertificateType;
 
 /**
  * The Interface CertificateBasicInfo.
