@@ -1,7 +1,6 @@
 package com.efragance.persistence.formula.repositories;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -23,6 +22,6 @@ public interface IngredientRepository extends BaseRepository<Ingredient, Long>, 
     @Query(nativeQuery = true)
     List<IngredientListDto> findDilutions();
 
-    Optional<Ingredient> findByIdExternal(final Long idExternal);
+    List<Ingredient> findByIdExternal(final Long idExternal);
 
 }
