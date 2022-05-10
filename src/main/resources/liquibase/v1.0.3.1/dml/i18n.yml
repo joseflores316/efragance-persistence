@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_I18N-v1.0.3.1
+      author: efragance
+      comment: "Insert default I18N"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.3.1
+             label: initial
+        - update:
+            tableName: I18N
+            columns:                    
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.1"  
+            where: id= 5          
+        - update:
+            tableName: I18N
+            columns:                    
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.2"  
+            where: id= 6
+                                    
+        - update:
+            tableName: I18N
+            columns:
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.3" 
+            where: id= 7  
+                  
+      
+             
+                  
+                  
+               
+                  
+                 

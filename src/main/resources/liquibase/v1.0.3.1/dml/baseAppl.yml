@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_BASE_APPL-v1.0.3.1
+      author: efragance
+      comment: "Insert default base appl"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.3.1
+             label: initial
+        - update:
+            tableName: BASE_APPL
+            columns:             
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.1" 
+            where: id= 1 
+        - update:
+            tableName: BASE_APPL
+            columns:             
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.2" 
+            where: id= 2  
+        - update:
+            tableName: BASE_APPL
+            columns:             
+              - column:
+                  name: TAG_I18N
+                  value: "BASE_APPL.3" 
+            where: id= 3      
+                  
+          
+             
+                  
+                  
+               
+                  
+                 
