@@ -1,0 +1,10 @@
+﻿databaseChangeLog:
+- include:
+    file: ddl/createCompoundRT.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
+    file: ddl/createCompound.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+
