@@ -6,7 +6,7 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.formula.models.RawMaterial;
+import com.efragance.persistence.models.RawMaterial;
 
 /**
  * The Interface RawMaterialRepository.

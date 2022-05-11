@@ -7,8 +7,8 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.formula.dto.IngredientListDto;
-import com.efragance.persistence.formula.models.Ingredient;
+import com.efragance.persistence.dto.IngredientListDto;
+import com.efragance.persistence.models.Ingredient;
 
 /**
  * The Interface IngredientRepository.

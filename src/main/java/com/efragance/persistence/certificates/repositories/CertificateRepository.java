@@ -6,8 +6,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.certificates.models.Certificate;
 import com.efragance.persistence.certificates.projections.CertificateBasicInfo;
+import com.efragance.persistence.models.Certificate;
 
 /**
  * The Interface CertificatesRepository.

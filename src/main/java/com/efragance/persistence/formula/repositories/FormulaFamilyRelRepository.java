@@ -7,8 +7,8 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.query.Param;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.formula.models.FormulaFamilyRel;
 import com.efragance.persistence.formula.projections.FormulaFamilyRelDescriptions;
+import com.efragance.persistence.models.FormulaFamilyRel;
 
 /**
  * The Interface FormulaFamilyRelRepository.
