@@ -1,10 +1,14 @@
 ﻿databaseChangeLog:
 - include:
+    file: ddl/createCompound.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
     file: ddl/createCompoundRT.yml
     relativeToChangelogFile: true
     encoding: "utf8" 
 - include:
-    file: ddl/createCompound.yml
+    file: ddl/createIngredientCompoundRel.yml
     relativeToChangelogFile: true
     encoding: "utf8" 
 

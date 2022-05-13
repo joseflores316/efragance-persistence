@@ -22,14 +22,7 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
                     primaryKeyName: PK_COMPOUND
-                    nullable: false
-             -  column:  
-                  name:  COMPOUND_RT_ID
-                  type:  bigint(20)
-                  constraints:
-                    nullable: false     
-                    foreignKeyName: FK_COMPOUND_COMPOUND_RT
-                    references: COMPOUND_RT(ID)              
+                    nullable: false              
              -  column:  
                   name:  TAG_I18N
                   type:  varchar(100)        
