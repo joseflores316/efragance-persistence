@@ -16,11 +16,18 @@ databaseChangeLog:
            tableName:  INGREDIENT_COMPOUND_REL  
            columns:
              -  column:  
-                  name: INGREDIENT_ID
-                  type:  bigint(20)               
+                  name:  ID  
+                  type:  bigint(20)
+                  autoIncrement: true
                   constraints:
                     primaryKey: true
                     primaryKeyName: PK_INGREDIENT_COMPOUND_REL
+                    nullable: false           
+             -  column:  
+                  name: INGREDIENT_ID
+                  type:  bigint(20)               
+                  constraints:
+                    primaryKey: false                   
                     nullable: false
                     foreignKeyName: FK_INGREDIENT_COMPOUND_REL_INGREDIENT_ID
                     references: INGREDIENTS(ID)
@@ -28,8 +35,7 @@ databaseChangeLog:
                   name:  COMPOUND_ID
                   type:  bigint(20)
                   constraints:
-                    primaryKey: true
-                    primaryKeyName: PK_INGREDIENT_COMPOUND_REL
+                    primaryKey: false                   
                     nullable: false
                     foreignKeyName: FK_INGREDIENT_COMPOUND_REL_COMPOUND_ID
                     references: COMPOUND(ID)
