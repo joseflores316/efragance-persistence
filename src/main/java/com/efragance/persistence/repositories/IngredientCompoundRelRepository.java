@@ -10,14 +10,13 @@ import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
 import com.efragance.persistence.models.IngredientCompoundRel;
 import com.efragance.persistence.models.Method;
 
-/**
- * The Interface IngredientCompoundRelRepository
- */
 @Repository
 public interface IngredientCompoundRelRepository
         extends BaseRepository<IngredientCompoundRel, Long>, QuerydslPredicateExecutor<IngredientCompoundRel> {
 
     Optional<IngredientCompoundRel> findByCompoundId(final Long id);
+
+    IngredientCompoundRel findByIngredientId(Long id);
 
     List<IngredientCompoundRel> findByIngredientIdAndCompoundId(final Long ingredientId, final Long compoundId);
 

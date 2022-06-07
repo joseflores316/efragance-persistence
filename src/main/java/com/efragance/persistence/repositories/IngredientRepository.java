@@ -10,9 +10,6 @@ import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
 import com.efragance.persistence.dto.IngredientListDto;
 import com.efragance.persistence.models.Ingredient;
 
-/**
- * The Interface IngredientRepository.
- */
 @Repository
 public interface IngredientRepository extends BaseRepository<Ingredient, Long>, QuerydslPredicateExecutor<Ingredient> {
 
