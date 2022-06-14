@@ -18,4 +18,6 @@ public interface IngredientAttrRepository
     Optional<IngredientAttr> findByAttrTypeId(Long attrTypeId);
 
     Optional<IngredientAttr> findByIngredientIdAndAttrTypeId(Long ingredientId, Long attrTypeId);
+
+    IngredientAttr findByIngredientId(Long ingredientId);
 }

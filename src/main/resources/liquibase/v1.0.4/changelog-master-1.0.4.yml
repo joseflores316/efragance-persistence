@@ -10,5 +10,13 @@
 - include:
     file: ddl/createIngredientCompoundRel.yml
     relativeToChangelogFile: true
-    encoding: "utf8" 
+    encoding: "utf8"
+- include:
+      file: ddl/createCentro.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+    file: ddl/createIngredientCost.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 
