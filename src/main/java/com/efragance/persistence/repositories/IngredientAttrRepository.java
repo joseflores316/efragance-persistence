@@ -1,5 +1,6 @@
 package com.efragance.persistence.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -19,5 +20,5 @@ public interface IngredientAttrRepository
 
     Optional<IngredientAttr> findByIngredientIdAndAttrTypeId(Long ingredientId, Long attrTypeId);
 
-    IngredientAttr findByIngredientId(Long ingredientId);
+    List<IngredientAttr> findByIngredientId(Long ingredientId);
 }
