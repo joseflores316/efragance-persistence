@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id:  create-table-LIBRARY-v1.0.4
+      author:  efragance
+      comment: "Create table LIBRARY"
+      tag: 1.0.4
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: LIBRARY
+      changes:
+        -  tagDatabase:
+             tag:  1.0.4
+        -  createTable:
+             tableName:  LIBRARY
+             columns:
+               -  column:
+                    name:  ID
+                    type:  bigint(20)
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: PK_LIBRARY
+                      nullable: false
+               -  column:
+                    name:  NOMBRE
+                    type:  varchar(100)
+                    constraints:
+                      nullable: false

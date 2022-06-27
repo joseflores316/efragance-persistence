@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id:  create-table-METHOD_TABLE-v1.0.4
+      author:  efragance
+      comment: "Create table METHOD_TABLE"
+      tag: 1.0.4
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: METHOD_TABLE
+      changes:
+        -  tagDatabase:
+             tag:  1.0.4
+        -  createTable:
+             tableName:  METHOD_TABLE
+             columns:
+               -  column:
+                    name:  ID
+                    type:  bigint(20)
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: PK_METHOD_TABLE
+                      nullable: false
+               -  column:
+                    name:  METHOD_TABLE_ENUM
+                    type:  varchar(150)
+                    constraints:
+                      nullable: false
+               - column:
+                   name: METHOD_TABLE_NAME
+                   type: varchar(150)
+                   constraints:
+                     nullable: false
