@@ -43,3 +43,11 @@
     file: ddl/createLibraryCompoundRel.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/createCompoundPeaks.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompoundRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"    
