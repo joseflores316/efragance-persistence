@@ -1,0 +1,61 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  modify-table-INGREDIENTS-v1.0.4
+      author:  efragance
+      comment: "Modify table INGREDIENTS"
+      tag: 1.0.4
+      changes:
+       -  tagDatabase:  
+           tag:  1.0.4
+       -  dropColumn:
+            tableName:  INGREDIENTS
+            columns:
+              - column:
+                  name:  ID_EXTERNAL
+              - column:
+                  name: TYPE
+       -  addColumn:
+            tableName:  INGREDIENTS
+            columns:
+            - column:
+                name: VERSION
+                type: bigint(20)
+                constraints:
+                  nullable: false
+            - column:
+                name: CODE
+                type: varchar(50)
+                constraints:
+                  nullable: false
+            - column:
+                name: NAME
+                type: varchar(400)
+                constraints:
+                  nullable: false
+            - column:
+                name: CATEGORY
+                type: varchar(5)
+                constraints:
+                  nullable: false
+            - column:
+                name: CREATED_BY
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: CREATED_DATE
+                type: datetime(6)
+                constraints:
+                  nullable: false
+            - column:
+                name: MODIFIED_BY
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: MODIFIED_DATE
+                type: datetime(6)
+                constraints:
+                  nullable: false              -
+
+         

@@ -1,4 +1,12 @@
 ﻿databaseChangeLog:
+#- include:
+#    file: ddl/modifyIngredientAttr.yml
+#    relativeToChangelogFile: true
+#    encoding: "utf8"
+#- include:
+#    file: ddl/modifyIngredient.yml
+#    relativeToChangelogFile: true
+#    encoding: "utf8"
 - include:
     file: ddl/createCompound.yml
     relativeToChangelogFile: true
@@ -41,5 +49,21 @@
     encoding: "utf8"    
 - include:
     file: ddl/createLibraryCompoundRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+      file: ddl/modifyIngredient.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+      file: ddl/modifyIngredientAttr.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+    file: dml/ingredients.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/ingredientAttr.yml
     relativeToChangelogFile: true
     encoding: "utf8"

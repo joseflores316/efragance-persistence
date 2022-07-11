@@ -22,7 +22,7 @@ databaseChangeLog:
                 constraints:
                   primaryKey: true
                   primaryKeyName: PK_INGREDIENTS
-                  nullable: false                  
+                  nullable: false
            - column:
                 name: ID_EXTERNAL
                 type: bigint(20)     

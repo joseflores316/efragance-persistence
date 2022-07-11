@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  modify-table-INGREDIENT-ATTR-v1.0.4
+      author:  efragance
+      comment: "Modify table INGREDIENT-ATTR"
+      tag: 1.0.4
+      changes:
+       -  tagDatabase:  
+           tag:  1.0.4
+       -  dropColumn:
+           tableName:  INGREDIENT_ATTR  
+           columns:
+           -  column:  
+                name:  VALUE
+       -  addColumn:
+            tableName:  INGREDIENT_ATTR
+            columns:
+              - column:
+                  name: VALUE_TEXT
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: VALUE_NUMBER
+                  type: INT(11)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: VALUE_DATE
+                  type:  DATETIME(6)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: VALUE_DECIMAL
+                  type: DECIMAL(20,6)
+                  constraints:
+                    nullable: true
+                  
+                  

@@ -1,13 +1,12 @@
 package com.efragance.persistence.repositories;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
+import com.efragance.persistence.models.IngredientAttr;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
-import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
-import com.efragance.persistence.models.IngredientAttr;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * The Interface IngredientAttrRepository.
@@ -16,9 +15,12 @@ import com.efragance.persistence.models.IngredientAttr;
 public interface IngredientAttrRepository
         extends BaseRepository<IngredientAttr, Long>, QuerydslPredicateExecutor<IngredientAttr> {
 
-    Optional<IngredientAttr> findByAttrTypeId(Long attrTypeId);
+    List<Optional<IngredientAttr>> findByAttrTypeId(Long attrTypeId);
 
     Optional<IngredientAttr> findByIngredientIdAndAttrTypeId(Long ingredientId, Long attrTypeId);
 
     List<IngredientAttr> findByIngredientId(Long ingredientId);
+
+    boolean existsByAttrTypeId(Long attrTypeId);
+
 }
