@@ -25,6 +25,6 @@ databaseChangeLog:
                       nullable: false
                -  column:
                     name:  VALUE
-                    type:  varchar(150)
+                    type:  varchar(20)
                     constraints:
                       nullable: false

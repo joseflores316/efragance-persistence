@@ -50,4 +50,24 @@
 - include:
     file: ddl/createFormulaCompoundRel.yml
     relativeToChangelogFile: true
-    encoding: "utf8"    
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompArea.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompAreaRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompAreaVal.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompSuggestion.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+#- include:
+#    file: ddl/createFormulaMatching.yml
+#    relativeToChangelogFile: true
+#    encoding: "utf8"
