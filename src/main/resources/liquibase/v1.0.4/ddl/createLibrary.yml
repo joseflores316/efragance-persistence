@@ -24,7 +24,7 @@ databaseChangeLog:
                       primaryKeyName: PK_LIBRARY
                       nullable: false
                -  column:
-                    name:  NOMBRE
-                    type:  varchar(100)
+                    name:  NAME
+                    type:  varchar(150)
                     constraints:
                       nullable: false

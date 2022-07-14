@@ -31,6 +31,13 @@ databaseChangeLog:
                     foreignKeyName: FK_FORMULA_CHEM_MS_FILE_FORMULAS_ID
                     references: FORMULAS(ID)
              -  column:  
+                  name:  LIBRARY_ID
+                  type:  bigint(20)
+                  constraints:
+                    nullable: false     
+                    foreignKeyName: FK_FORMULA_CHEM_MS_FILE_LLIBRARY_ID
+                    references: LIBRARY(ID)
+             -  column:  
                   name:  METHOD_TABLE_ID
                   type:  bigint(20)
                   constraints:
