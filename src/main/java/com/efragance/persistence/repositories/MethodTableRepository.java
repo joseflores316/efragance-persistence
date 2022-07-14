@@ -4,11 +4,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.persistence.enumerator.MethodTableEnum;
-import com.efragance.persistence.models.MethodTableEntity;
+import com.efragance.persistence.models.MethodTable;
 
 @Repository
-public interface MethodTableRepository extends JpaRepository<MethodTableEntity, Long> {
+public interface MethodTableRepository extends JpaRepository<MethodTable, Long> {
 
-	MethodTableEntity findByMethodTableEnum(MethodTableEnum methodTableEnum);
+	MethodTable findByMethodTableEnum(MethodTableEnum methodTableEnum);
+
+	MethodTable findByMethodTableEnum(String methodTableEnum);
 
 }

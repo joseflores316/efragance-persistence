@@ -1,8 +1,8 @@
 databaseChangeLog:
   - changeSet:  
-      id:  create-table-LIBRARY_COMPONENT_REL-v1.0.4
+      id:  create-table-LIBRARY_COMPOUND_REL-v1.0.4
       author:  efragance
-      comment: "Create table LIBRARY_COMPONENT_REL"
+      comment: "Create table LIBRARY_COMPOUND_REL"
       tag: 1.0.4
       preConditions:
         - onFail: MARK_RAN

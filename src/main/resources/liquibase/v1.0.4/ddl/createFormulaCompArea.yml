@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  create-table-FORMULA_COMP_AREA-v1.0.4
+      author:  efragance
+      comment: "Create table FORMULA_COMP_AREA"
+      tag: 1.0.4
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: FORMULA_COMP_AREA
+      changes:  
+       -  tagDatabase:  
+           tag:  1.0.4
+       -  createTable:  
+           tableName:  FORMULA_COMP_AREA  
+           columns:
+             -  column:  
+                  name:  ID  
+                  type:  bigint(20)
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: PK_FORMULA_COMP_AREA
+                    nullable: false
+             -  column:  
+                  name:  METHOD_TABLE_ID
+                  type:  bigint(20)
+                  constraints:
+                    nullable: false     
+                    foreignKeyName: FK_FORMULA_COMP_AREA_METHOD_TABLE_ID
+                    references: METHOD_TABLE(ID)
+             -  column:  
+                  name:  APROX
+                  type:  varchar(10)        
+                  constraints:                   
+                    nullable: false 
+             -  column:  
+                  name:  APROX_DETAIL
+                  type:  varchar(100)        
+                  constraints:                   
+                    nullable: false
+                  
