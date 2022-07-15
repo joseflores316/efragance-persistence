@@ -32,6 +32,10 @@
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
+    file: ddl/createLibrary.yml
+    relativeToChangelogFile: true
+    encoding: "utf8" 
+- include:
     file: ddl/createFormulaChemFidFile.yml
     relativeToChangelogFile: true
     encoding: "utf8"
@@ -42,11 +46,7 @@
 - include:
     file: ddl/createFormulaAmdisFile.yml
     relativeToChangelogFile: true
-    encoding: "utf8"
-- include:
-    file: ddl/createLibrary.yml
-    relativeToChangelogFile: true
-    encoding: "utf8"    
+    encoding: "utf8"   
 - include:
     file: ddl/createLibraryCompoundRel.yml
     relativeToChangelogFile: true
@@ -67,3 +67,44 @@
     file: dml/ingredientAttr.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/createCompoundPeaks.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompoundRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompArea.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompAreaRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompAreaVal.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompSuggestion.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+#- include:
+#    file: ddl/createFormulaMatching.yml
+#    relativeToChangelogFile: true
+#    encoding: "utf8"
+- include:
+      file: ddl/modifyIngredientAttr.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+    file: dml/ingredients.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: dml/ingredientAttr.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+

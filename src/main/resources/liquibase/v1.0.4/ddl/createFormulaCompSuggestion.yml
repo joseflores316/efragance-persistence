@@ -1,19 +1,19 @@
 databaseChangeLog:
   - changeSet:  
-      id:  create-table-FORMULA_AMDIS_FILE-v1.0.4
+      id:  create-table-FORMULA_COMP_SUGGESTION-v1.0.4
       author:  efragance
-      comment: "Create table FORMULA_AMDIS_FILE"
+      comment: "Create table FORMULA_COMP_SUGGESTION"
       tag: 1.0.4
       preConditions:
         - onFail: MARK_RAN
           not:
             tableExists:
-              tableName: FORMULA_AMDIS_FILE
+              tableName: FORMULA_COMP_SUGGESTION
       changes:  
        -  tagDatabase:  
            tag:  1.0.4
        -  createTable:  
-           tableName:  FORMULA_AMDIS_FILE  
+           tableName:  FORMULA_COMP_SUGGESTION  
            columns:
              -  column:  
                   name:  ID  
@@ -21,29 +21,22 @@ databaseChangeLog:
                   autoIncrement: true
                   constraints:
                     primaryKey: true
-                    primaryKeyName: PK_FORMULA_AMDIS_FILE
+                    primaryKeyName: PK_FORMULA_COMP_SUGGESTION
                     nullable: false
              -  column:  
                   name:  FORMULAS_ID
                   type:  bigint(20)
                   constraints:
                     nullable: false     
-                    foreignKeyName: FK_FORMULA_AMDIS_FILE_FORMULAS_ID
+                    foreignKeyName: FK_FORMULA_COMP_SUGGESTION_FORMULAS_ID
                     references: FORMULAS(ID)
              -  column:  
                   name:  METHOD_TABLE_ID
                   type:  bigint(20)
                   constraints:
                     nullable: false     
-                    foreignKeyName: FK_FORMULA_AMDIS_FILE_METHOD_TABLE_ID
-                    references: METHOD_TABLE(ID) 
-             -  column:  
-                  name:  LIBRARY_ID
-                  type:  bigint(20)
-                  constraints:
-                    nullable: false     
-                    foreignKeyName: FK_FORMULA_AMDIS_FILE_LIBRARY_ID
-                    references: LIBRARY(ID) 
+                    foreignKeyName: FK_FORMULA_COMP_SUGGESTION_METHOD_TABLE_ID
+                    references: METHOD_TABLE(ID)
              -  column:  
                   name:  RT
                   type:  NUMBER (3,3)   

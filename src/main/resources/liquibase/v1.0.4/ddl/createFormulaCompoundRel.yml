@@ -1,19 +1,19 @@
 databaseChangeLog:
   - changeSet:
-      id:  create-table-LIBRARY-v1.0.4
+      id:  create-table-FORMULA_COMPOUND_REL-v1.0.4
       author:  efragance
-      comment: "Create table LIBRARY"
+      comment: "Create table FORMULA_COMPOUND_REL"
       tag: 1.0.4
       preConditions:
         - onFail: MARK_RAN
           not:
             tableExists:
-              tableName: LIBRARY
+              tableName: FORMULA_COMPOUND_REL
       changes:
         -  tagDatabase:
              tag:  1.0.4
         -  createTable:
-             tableName:  LIBRARY
+             tableName:  FORMULA_COMPOUND_REL
              columns:
                -  column:
                     name:  ID
@@ -21,10 +21,11 @@ databaseChangeLog:
                     autoIncrement: true
                     constraints:
                       primaryKey: true
-                      primaryKeyName: PK_LIBRARY
+                      primaryKeyName: PK_FORMULA_COMPOUND_REL
                       nullable: false
-               -  column:
-                    name:  NAME
-                    type:  varchar(150)
-                    constraints:
-                      nullable: false
+               - column:
+                   name: BASE
+                   type: boolean
+                   constraints:
+                     nullable: false
+

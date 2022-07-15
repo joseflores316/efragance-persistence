@@ -1,19 +1,19 @@
 databaseChangeLog:
   - changeSet:
-      id:  create-table-LIBRARY-v1.0.4
+      id:  create-table-COMPOUND_PEAKS-v1.0.4
       author:  efragance
-      comment: "Create table LIBRARY"
+      comment: "Create table COMPOUND_PEAKS"
       tag: 1.0.4
       preConditions:
         - onFail: MARK_RAN
           not:
             tableExists:
-              tableName: LIBRARY
+              tableName: COMPOUND_PEAKS
       changes:
         -  tagDatabase:
              tag:  1.0.4
         -  createTable:
-             tableName:  LIBRARY
+             tableName:  COMPOUND_PEAKS
              columns:
                -  column:
                     name:  ID
@@ -21,10 +21,10 @@ databaseChangeLog:
                     autoIncrement: true
                     constraints:
                       primaryKey: true
-                      primaryKeyName: PK_LIBRARY
+                      primaryKeyName: PK_COMPOUND_PEAKS
                       nullable: false
                -  column:
-                    name:  NAME
-                    type:  varchar(150)
+                    name:  VALUE
+                    type:  varchar(20)
                     constraints:
                       nullable: false
