@@ -107,4 +107,8 @@
     file: dml/ingredientAttr.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/createIngredientCode.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 
