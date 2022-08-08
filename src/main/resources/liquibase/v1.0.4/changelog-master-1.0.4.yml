@@ -107,4 +107,16 @@
     file: dml/ingredientAttr.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+    file: ddl/modifyDilutions.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+      file: ddl/modifyFormulas.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+      file: ddl/modifyRawMaterials.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
 
