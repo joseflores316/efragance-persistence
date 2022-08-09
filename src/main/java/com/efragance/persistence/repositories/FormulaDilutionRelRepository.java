@@ -1,5 +1,6 @@
 package com.efragance.persistence.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -18,5 +19,7 @@ public interface FormulaDilutionRelRepository
     long countByDilutionIdAndFormulaId(long dilutionId, long formulaId);
 
     Optional<FormulaDilutionRel> findByDilutionIdAndFormulaId(long dilutionId, long formulaId);
+
+	Iterable<FormulaDilutionRel> findByFormulaIdIn(List<Long> ids);
 
 }
