@@ -122,4 +122,3 @@
       file: ddl/modifyRawMaterials.yml
       relativeToChangelogFile: true
       encoding: "utf8"
-

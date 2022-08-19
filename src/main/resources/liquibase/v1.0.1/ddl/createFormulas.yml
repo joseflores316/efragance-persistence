@@ -64,5 +64,5 @@ databaseChangeLog:
                 name:  TYPE
                 type:  varchar(15)
                 constraints:
-                  nullable: false
+                  nullable: false       
                   

@@ -1,0 +1,19 @@
+databaseChangeLog:
+- changeSet:
+    id: modify-table-INGREDIENTS-v1.0.5
+    author: efragance
+    comment: Modify table INGREDIENTS
+    tag: 1.0.5
+    changes:
+    - tagDatabase:
+        tag: 1.0.5
+    - addColumn:
+        tableName: INGREDIENTS
+        columns:
+        - column:
+            name: ODOR_KEY_ID
+            type: bigint(20)
+            constraints:
+              nullable: true
+              foreignKeyName: FK_ODOR_KEY_ID
+              references: ODOR_KEY(ID)
