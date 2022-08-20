@@ -111,6 +111,7 @@
     file: ddl/createIngredientCode.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
     file: ddl/modifyDilutions.yml
     relativeToChangelogFile: true
     encoding: "utf8"
