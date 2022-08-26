@@ -25,4 +25,6 @@ public interface I18nRepository extends BaseRepository<I18n, Long>, QuerydslPred
     @Query(nativeQuery = true, value = "delete from i18n  where  tag_i18n=:tagI18n")
     void delete(@Param("tagI18n") final String tagI18n);
 
+	List<I18n> findByTextAndLocale(String text, String lenguage);
+
 }

@@ -12,4 +12,8 @@ import com.efragance.persistence.models.Compound;
 @Repository
 public interface CompoundRepository extends BaseRepository<Compound, Long>, QuerydslPredicateExecutor<Compound> {
 
+	Compound findByTagI18n(String tagI18n);
+
+	Compound findTopByOrderByIdDesc();
+
 }
