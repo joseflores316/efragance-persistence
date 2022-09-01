@@ -26,4 +26,6 @@ public interface CompoundRtRepository extends BaseRepository<CompoundRT, Long>, 
     void deleteByCompoundId(@Param("compoundId") final Long compoundId);
 
     Optional<CompoundRT> findByCompoundIdAndMethod(final Long compoundId, final Method meethod);
+
+	Optional<CompoundRT> findByCompoundIdAndMethodAndRttStatus(Long id, Method method, String rttStatus);
 }
