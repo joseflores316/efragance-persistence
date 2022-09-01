@@ -1,0 +1,17 @@
+databaseChangeLog:
+- changeSet:
+    id: modify-table-COMPOUND_RT-v1.0.5
+    author: efragance
+    comment: Modify table COMPOUND_RT
+    tag: 1.0.5
+    changes:
+    - tagDatabase:
+        tag: 1.0.5
+    - addColumn:
+        tableName: COMPOUND_RT
+        columns:
+        - column:
+            name: RTT_STATUS
+            type: varchar(20)
+            constraints:
+              nullable: false
