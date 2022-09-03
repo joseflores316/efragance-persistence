@@ -1,5 +1,6 @@
 package com.efragance.persistence.repositories;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,5 +28,8 @@ public interface CompoundRtRepository extends BaseRepository<CompoundRT, Long>, 
 
     Optional<CompoundRT> findByCompoundIdAndMethod(final Long compoundId, final Method meethod);
 
-	Optional<CompoundRT> findByCompoundIdAndMethodAndRttStatus(Long id, Method method, String rttStatus);
+	Optional<CompoundRT> findByCompoundIdAndMethodAndRttStatus(final Long id, final Method method, final String rttStatus);
+
+	Optional<CompoundRT> findByCompoundIdAndMethodAndRttAndRttStatus(Long compoundd, Method method, BigDecimal rttValue, String rttStatus);
+	
 }
