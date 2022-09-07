@@ -11,7 +11,5 @@ public interface MethodTableRepository extends JpaRepository<MethodTable, Long> 
 
 	MethodTable findByMethodTableEnum(MethodTableEnum methodTableEnum);
 
-	MethodTable findByMethodTableEnum(String methodTableEnum);
-
 	MethodTable findByMethodTableName(String methodName);
 }

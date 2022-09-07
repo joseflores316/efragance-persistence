@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id:  create-table-IDENTIFICATION_TABLE-v1.0.5
+      author:  efragance
+      comment: "Create table IDENTIFICATION_TABLE"
+      tag: 1.0.5
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: IDENTIFICATION_TABLE
+      changes:
+        -  tagDatabase:
+             tag:  1.0.5
+        -  createTable:
+             tableName:  IDENTIFICATION_TABLE
+             columns:
+               -  column:
+                    name:  ID
+                    type:  bigint(20)
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: PK_IDENTIFICATION_TABLE
+                      nullable: false
+               -  column:
+                    name:  IDENTIFICATION_TABLE_ENUM
+                    type:  varchar(150)
+                    constraints:
+                      nullable: false
+               - column:
+                   name: IDENTIFICATION_TABLE_NAME
+                   type: varchar(150)
+                   constraints:
+                     nullable: false

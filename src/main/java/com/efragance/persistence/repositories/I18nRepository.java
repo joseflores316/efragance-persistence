@@ -28,4 +28,6 @@ public interface I18nRepository extends BaseRepository<I18n, Long>, QuerydslPred
 
 	Optional<I18n> findByTextAndLocale(String text, String lenguage);
 
+    Optional<I18n> findByText(String text);
+
 }
