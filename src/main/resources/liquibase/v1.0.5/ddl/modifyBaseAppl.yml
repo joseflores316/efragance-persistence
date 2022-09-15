@@ -1,0 +1,37 @@
+databaseChangeLog:
+- changeSet:
+    id: modify-table-BASE_APPL-v1.0.5
+    author: efragance
+    comment: Modify table BASE_APPL
+    tag: 1.0.5
+    changes:
+    - tagDatabase:
+        tag: 1.0.5  
+    - renameColumn:
+        tableName: BASE_APPL
+        newColumnName: APPLICATIONS
+        oldColumnName: TAG_I18N
+        columnDataType: VARCHAR(100) 
+    - renameColumn:
+        tableName: BASE_APPL
+        newColumnName: SUBAPPLICATIONS
+        oldColumnName: TYPE
+        columnDataType: VARCHAR(50)          
+    - addColumn:
+        tableName: BASE_APPL
+        columns:      
+        - column:
+            name: IFRA
+            type: VARCHAR(20)
+            constraints:
+              nullable: true
+        - column:
+            name: INTERNAL_BASE
+            type: VARCHAR(255)
+            constraints:
+              nullable: true
+        - column:
+            name: STD_DOSE
+            type: VARCHAR(20)
+            constraints:
+              nullable: true          
