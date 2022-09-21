@@ -59,4 +59,6 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
     // @formatter:on
     Optional<Formula> findByCodeOrSapCode(@Param(value = "searchCode") String searchCode);
 
+	Optional<Formula> findByIdAndIngredientId(Long ingredientOne, Long ingredientTwo);
+
 }

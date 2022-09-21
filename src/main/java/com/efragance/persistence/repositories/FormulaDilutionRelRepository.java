@@ -22,4 +22,8 @@ public interface FormulaDilutionRelRepository
 
 	Iterable<FormulaDilutionRel> findByFormulaIdIn(List<Long> ids);
 
+	Optional<FormulaDilutionRel> findByFormulaIdAndDilutionId(Long id, Long id2);
+
+	boolean deleteByFormulaId(Long formulaId);
+
 }

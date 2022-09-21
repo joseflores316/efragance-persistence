@@ -1,6 +1,7 @@
 package com.efragance.persistence.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
@@ -15,5 +16,9 @@ import com.efragance.persistence.models.FormulaRel;
 public interface FormulaRelRepository extends BaseRepository<FormulaRel, Long>, QuerydslPredicateExecutor<FormulaRel> {
 
 	Iterable<FormulaRel> findByFormulaIdIn(List<Long> ids);
+
+	Optional<FormulaRel> findByFormulaId(Long id);
+
+	boolean deleteByFormulaId(Long formulaId);
 
 }
