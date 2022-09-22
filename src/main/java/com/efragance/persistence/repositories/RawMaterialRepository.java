@@ -41,4 +41,6 @@ public interface RawMaterialRepository
 
     Optional<RawMaterial> findByCode(String code);
 
+	Optional<RawMaterial> findByIngredientId(Long id);
+
 }

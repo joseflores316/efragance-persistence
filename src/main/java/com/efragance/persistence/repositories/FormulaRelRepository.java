@@ -21,4 +21,6 @@ public interface FormulaRelRepository extends BaseRepository<FormulaRel, Long>, 
 
 	boolean deleteByFormulaId(Long formulaId);
 
+	Optional<FormulaRel> findByFormulaIdAndRelationLevel(Long id, int i);
+
 }

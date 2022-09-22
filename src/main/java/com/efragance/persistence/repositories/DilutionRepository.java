@@ -31,4 +31,6 @@ public interface DilutionRepository extends BaseRepository<Dilution, Long>, Quer
      */
     Optional<Dilution> findByNameAndIdNot(String name, Long dilutionId);
 
+	Optional<Dilution> findByIngredientId(Long id);
+
 }
