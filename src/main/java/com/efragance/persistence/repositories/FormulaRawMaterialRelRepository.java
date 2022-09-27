@@ -19,4 +19,7 @@ public interface FormulaRawMaterialRelRepository extends BaseRepository<FormulaR
 	Iterable<FormulaRawMaterialRel> findByFormulaIdIn(List<Long> list);
 
 	boolean deleteByFormulaId(Long formulaId);
+
+	void deleteByFormulaIdAndRawMaterialId(Long formulaId, Long ingredientId);
+
 }

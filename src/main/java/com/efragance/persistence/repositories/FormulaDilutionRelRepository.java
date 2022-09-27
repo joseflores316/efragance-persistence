@@ -24,6 +24,6 @@ public interface FormulaDilutionRelRepository
 
 	Optional<FormulaDilutionRel> findByFormulaIdAndDilutionId(Long id, Long id2);
 
-	boolean deleteByFormulaId(Long formulaId);
+	void deleteByFormulaIdAndDilutionId(Long id, Long ingredientId);
 
 }

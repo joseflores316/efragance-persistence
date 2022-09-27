@@ -23,4 +23,14 @@ public interface FormulaRelRepository extends BaseRepository<FormulaRel, Long>, 
 
 	Optional<FormulaRel> findByFormulaIdAndRelationLevel(Long id, int i);
 
+	void deleteByFormulaIdAndSubFormulaIdAndRelationLevel(Long id, Long ingredientId, int i);
+
+	Optional<FormulaRel> findByFormulaIdAndSubFormulaIdAndRelationLevel(Long formulaId, Long subFormulaId, int level);
+
+	Iterable<FormulaRel> findByFormulaIdInAndRelationLevel(List<Long> ids, int level);
+
+	Iterable<FormulaRel> findAllByFormulaId(Long formulaId);
+
+	void deleteAllByFormulaIdAndFormulaOriginId(Long formulaId, Long subFormulaId);
+
 }

@@ -61,4 +61,6 @@ public interface FormulaRepository extends BaseRepository<Formula, Long>, Queryd
 
 	Optional<Formula> findByIdAndIngredientId(Long ingredientOne, Long ingredientTwo);
 
+	Optional<Formula> findByIngredientId(Long ingredientOne);
+
 }
