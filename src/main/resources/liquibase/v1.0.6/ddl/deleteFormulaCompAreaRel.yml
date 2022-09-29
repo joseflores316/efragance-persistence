@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: delete-table-FORMULA_COMP_AREA_REL-v1.0.6
+      author: efragance
+      comment: Delete table FORMULA_COMP_AREA_REL
+      tag: 1.0.6
+      changes:
+        - tagDatabase:
+            tag: 1.0.6
+        - dropTable:
+            cascadeConstraints: true
+            tableName: FORMULA_COMP_AREA_REL

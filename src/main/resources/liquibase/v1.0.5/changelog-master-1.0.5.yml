@@ -20,14 +20,30 @@
       relativeToChangelogFile: true
       encoding: "utf8"
 - include:
-      file: ddl/createLibraryErrors.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+- include      
+    file: ddl/createLibraryErrors.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
+    file: ddl/modifyFormulaCompoundRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createMsFidFileRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/deleteFormulaCompAreaVal.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/modifyFormulaCompArea.yml
+    relativeToChangelogFile: true
+    encoding: "utf8- include:
       file: ddl/modifyBaseAppl.yml
       relativeToChangelogFile: true
       encoding: "utf8"  
 - include:
       file: ddl/modifyFormulasRel.yml
       relativeToChangelogFile: true
-      encoding: "utf8"         
+      encoding: "utf8"
