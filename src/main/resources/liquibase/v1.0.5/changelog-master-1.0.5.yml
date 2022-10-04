@@ -30,4 +30,18 @@
 - include:
       file: ddl/modifyFormulasRel.yml
       relativeToChangelogFile: true
+      encoding: "utf8"      
+- include:
+      file: ddl/modifyFormulaChemFidFile.yml
+      relativeToChangelogFile: true
       encoding: "utf8"         
+- include:
+      file: ddl/modifyFormulaChemMsFile.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"        
+- include:
+      file: ddl/modifyFormulaAmdisFile.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"        
+      
+      

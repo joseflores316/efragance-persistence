@@ -1,0 +1,13 @@
+databaseChangeLog:
+- changeSet:
+    id: modify-table-FORMULA_AMDIS_FILE-v1.0.5
+    author: efragance
+    comment: Modify table FORMULA_AMDIS_FILE
+    tag: 1.0.5
+    changes:
+    - tagDatabase:
+        tag: 1.0.5  
+    - modifyDataType:
+        tableName: FORMULA_AMDIS_FILE
+        columnName: RT
+        newDataType: DECIMAL(20, 3)
