@@ -1,0 +1,13 @@
+databaseChangeLog:
+- changeSet:
+    id: modify-table-FORMULA_CHEM_MS_FILE-v1.0.5
+    author: efragance
+    comment: Modify table FORMULA_CHEM_MS_FILE
+    tag: 1.0.5
+    changes:
+    - tagDatabase:
+        tag: 1.0.5  
+    - modifyDataType:
+        tableName: FORMULA_CHEM_MS_FILE
+        columnName: RT
+        newDataType: DECIMAL(20, 3)
