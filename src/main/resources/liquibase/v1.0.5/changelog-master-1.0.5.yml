@@ -1,26 +1,25 @@
 ﻿databaseChangeLog:
 - include:
-      file: ddl/createOdorKey.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: ddl/createOdorKey.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
-      file: ddl/modifyIngredient.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: ddl/modifyIngredient.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
-      file: ddl/modifyCompoundRT.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: ddl/modifyCompoundRT.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
-      file: ddl/createLibraryCompoundRel.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: ddl/createLibraryCompoundRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
-      file: ddl/createIdentificationTable.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
-- include:
-- include      
+    file: ddl/createIdentificationTable.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:   
     file: ddl/createLibraryErrors.yml
     relativeToChangelogFile: true
     encoding: "utf8"
@@ -39,11 +38,24 @@
 - include:
     file: ddl/modifyFormulaCompArea.yml
     relativeToChangelogFile: true
-    encoding: "utf8- include:
-      file: ddl/modifyBaseAppl.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"  
+    encoding: "utf8"
 - include:
-      file: ddl/modifyFormulasRel.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: ddl/modifyBaseAppl.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"  
+- include:
+    file: ddl/modifyFormulasRel.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"      
+- include:
+    file: ddl/modifyFormulaChemFidFile.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"         
+- include:
+    file: ddl/modifyFormulaChemMsFile.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"        
+- include:
+    file: ddl/modifyFormulaAmdisFile.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"    
