@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: modify-table-FORMULA_COMP_AREA-v1.0.5
+      author: efragance
+      comment: Modify table FORMULA_COMP_AREA
+      tag: 1.0.5
+      changes:
+        - tagDatabase:
+            tag: 1.0.5
+        - addColumn:
+            tableName: FORMULA_COMP_AREA
+            columns:
+              -  column:
+                   name:  RT
+                   type:  NUMBER (3,3)
+                   constraints:
+                     nullable: false
+              -  column:
+                   name:  AREA
+                   type:  DECIMAL(10,5)
+                   constraints:
+                     nullable: false
+              -  column:
+                   name:  AREA_PCT
+                   type:  DECIMAL(10,5)
+                   constraints:
+                     nullable: false

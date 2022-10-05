@@ -14,4 +14,6 @@ public interface FormulaChemFidFileRepository extends BaseRepository<FormulaChem
 
 	Optional<FormulaChemFidFile> findByFormulaIdAndMethodTableIdAndRt(Long formulaId, Long methodTableId, BigDecimal stringToBigDecimal);
 
+    List<FormulaChemFidFile> findByFormulaIdAndRtBetween(Long formulaId, BigDecimal before , BigDecimal after);
+
 }

@@ -13,4 +13,6 @@ public interface LibraryCompoundRelRepository extends BaseRepository<LibraryComp
 
 	Optional<LibraryCompoundRel> findByCompoundIdAndLibraryId(Long compoundId, Long libraryId);
 
+	Optional<LibraryCompoundRel> findByLibraryId(Long libraryId);
+
 }

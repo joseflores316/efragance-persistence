@@ -1,0 +1,13 @@
+﻿databaseChangeLog:
+- include:
+    file: ddl/modifyFormulaCompArea.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+      file: ddl/deleteFormulaCompAreaRel.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+    file: ddl/modifyFormulaCompSuggestion.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
