@@ -11,8 +11,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.efragance.arch.persistence.repositories.interfaces.BaseRepository;
+import com.efragance.persistence.enumerator.MethodEnum;
 import com.efragance.persistence.models.CompoundRT;
-import com.efragance.persistence.models.Method;
 
 /**
  * The Interface CompoundRtRepository.
@@ -26,10 +26,12 @@ public interface CompoundRtRepository extends BaseRepository<CompoundRT, Long>, 
     @Query(nativeQuery = true, value = "delete from compound_rt  where  compound_id=:compoundId")
     void deleteByCompoundId(@Param("compoundId") final Long compoundId);
 
-    Optional<CompoundRT> findByCompoundIdAndMethod(final Long compoundId, final Method meethod);
+    Optional<CompoundRT> findByCompoundIdAndMethod(final Long compoundId, final MethodEnum meethod);
 
-	Optional<CompoundRT> findByCompoundIdAndMethodAndRttStatus(final Long id, final Method method, final String rttStatus);
+	Optional<CompoundRT> findByCompoundIdAndMethodAndRttStatus(final Long id, final MethodEnum method, final String rttStatus);
 
-	Optional<CompoundRT> findByCompoundIdAndMethodAndRttAndRttStatus(Long compoundd, Method method, BigDecimal rttValue, String rttStatus);
+	Optional<CompoundRT> findByCompoundIdAndMethodAndRttAndRttStatus(Long compoundd, MethodEnum method, BigDecimal rttValue, String rttStatus);
+
+	List<CompoundRT> findByMethodAndRttGreaterThanEqualAndRttLessThanEqual(final MethodEnum method, BigDecimal rttStart, BigDecimal rttEnd);
 	
 }
