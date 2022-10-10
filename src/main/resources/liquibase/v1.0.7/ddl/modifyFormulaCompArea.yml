@@ -11,3 +11,11 @@ databaseChangeLog:
             tableName: FORMULA_COMP_AREA
             columnName: RT
             newDataType: DECIMAL(20, 3)
+        - modifyDataType:
+            tableName: FORMULA_COMP_AREA
+            columnName: AREA
+            newDataType: DECIMAL(20, 3)
+        - modifyDataType:
+            tableName: FORMULA_COMP_AREA
+            columnName: AREA_PCT
+            newDataType: DECIMAL(20, 3)
