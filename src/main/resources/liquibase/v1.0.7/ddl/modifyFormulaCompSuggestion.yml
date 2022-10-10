@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: modify-table-FORMULA_COMP_SUGGESTION-v1.0.7
+      author: efragance
+      comment: Modify table FORMULA_COMP_SUGGESTION
+      tag: 1.0.7
+      changes:
+        - tagDatabase:
+            tag: 1.0.7
+        - modifyDataType:
+            tableName: FORMULA_COMP_SUGGESTION
+            columnName: RT
+            newDataType: DECIMAL(20, 3)

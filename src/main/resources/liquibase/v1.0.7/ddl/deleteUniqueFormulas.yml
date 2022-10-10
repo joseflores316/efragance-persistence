@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: DELETE-table-UNIQUE-CODE-FORMULAS-v1.0.7
+      author: efragance
+      comment: Modify table FORMULAS
+      tag: 1.0.7
+      changes:
+        - tagDatabase:
+            tag: 1.0.7
+        - dropUniqueConstraint:
+            tableName: FORMULAS
+            constraintName: UK_FORMULAS_CODE
