@@ -5,6 +5,7 @@ import com.efragance.persistence.models.FormulaCompSuggestion;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -13,4 +14,6 @@ public interface FormulaCompSuggestionRepository extends BaseRepository<FormulaC
     Optional<FormulaCompSuggestion> findByFormulaCompoundRelIdAndMethodTableId(Long formulaCompoundRelId, Long methodTableId);
 
     Boolean existsByFormulaCompoundRelIdAndMethodTableId(Long formulaCompoundRelId, Long methodTableId);
+
+	List<FormulaCompSuggestion> findByFormulaCompoundRelId(Long formulaCompoundRelId);
 }

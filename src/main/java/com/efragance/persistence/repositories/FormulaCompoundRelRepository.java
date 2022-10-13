@@ -14,5 +14,7 @@ public interface FormulaCompoundRelRepository extends BaseRepository<FormulaComp
     List<FormulaCompoundRel> findByFormulaIdAndCompoundId(Long formulaId, Long compoundId);
 
     Optional<FormulaCompoundRel> findById(Long id);
+
+	List<FormulaCompoundRel> findByFormulaId(Long formulaId);
     
 }
