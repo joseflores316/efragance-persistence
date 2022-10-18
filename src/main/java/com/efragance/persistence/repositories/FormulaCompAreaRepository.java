@@ -17,4 +17,6 @@ public interface FormulaCompAreaRepository extends BaseRepository<FormulaCompAre
 
 	List<FormulaCompArea> findByFormulaCompoundRelIdAndOriginal(Long formulaCompoundRelId, boolean original);
 
+	Optional<FormulaCompArea> findByFormulaCompoundRelIdAndMethodTableId(Long formulaCompoundRelId, Long methodTableId);
+
 }
