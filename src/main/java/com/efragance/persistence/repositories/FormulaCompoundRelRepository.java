@@ -19,4 +19,6 @@ public interface FormulaCompoundRelRepository extends BaseRepository<FormulaComp
 
     Optional<FormulaCompoundRel> findById(Long id);
 
+	long countByFormulaId(Long formulaId);
+
 }
