@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-DEFAULT_ATTR_TYPE-v1.0.7
+      author: efragance
+      comment: "Insert default attr type"
+      changes:
+        -  tagDatabase:
+             tag:  1.0.7
+             label: initial
+        - insert:
+            tableName: ATTR_TYPE
+            columns:
+              - column:
+                  name: ID
+                  value: 5
+              - column:
+                  name: BASE_ID
+                  value: 1
+              - column:
+                  name: TAG_I18N
+                  value: "ATTR_TYPE.5"
+              - column:
+                  name: VALUE_TYPE
+                  value: "TEXT"       
+              - column:
+                  name: SECTION
+                  value: "APPLICATION"

@@ -11,3 +11,11 @@ databaseChangeLog:
     file: ddl/deleteUniqueFormulas.yml
     relativeToChangelogFile: true
     encoding: "utf8"
+- include:
+      file: dml/attrType.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+      file: dml/i18n.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
