@@ -1,5 +1,13 @@
 databaseChangeLog:
 - include:
+    file: ddl/createCoelution.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
+    file: ddl/createFormulaCompCoelution.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
+- include:
     file: ddl/modifyFormulaCompArea.yml
     relativeToChangelogFile: true
     encoding: "utf8"
@@ -12,10 +20,10 @@ databaseChangeLog:
     relativeToChangelogFile: true
     encoding: "utf8"
 - include:
-      file: dml/attrType.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: dml/attrType.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
 - include:
-      file: dml/i18n.yml
-      relativeToChangelogFile: true
-      encoding: "utf8"
+    file: dml/i18n.yml
+    relativeToChangelogFile: true
+    encoding: "utf8"
