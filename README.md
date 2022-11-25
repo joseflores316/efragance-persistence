@@ -13,7 +13,7 @@ openjdk:8-jre-alpine
 ## Entorno
 ```
 Asegurar que el entorno de programación esta configruado en UTF-8 para garantizar que los acentos se 
-ven adecuadamente, sobretodo en los archivos .properties, encargados de internacionlizar el aplicativo
+ven adecuadamente, sobretodo en los archivos .properties, encargados de internacionlizar el aplicativoooo
 
 - Eclipse 4.13 (Plugins: SVN Suversive, Git,STS,JAutodoc,PMD,Checkstyle)
 
