@@ -1,0 +1,13 @@
+databaseChangeLog:
+- include:
+      file: ddl/createProjects.yml
+      relativeToChangelogFile: true
+      encoding: "utf8"
+- include:
+        file: ddl/createProjectLines.yml
+        relativeToChangelogFile: true
+        encoding: "utf8"
+- include:
+        file: ddl/createProjectLinesFormulas.yml
+        relativeToChangelogFile: true
+        encoding: "utf8"

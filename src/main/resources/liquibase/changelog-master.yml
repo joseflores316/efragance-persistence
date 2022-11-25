@@ -31,4 +31,8 @@
 - include:
       file: v1.0.7/changelog-master-1.0.7.yml
       relativeToChangelogFile: true
+- include:
+      file: v1.0.8/changelog-master-1.0.8.yml
+      relativeToChangelogFile: true
+
     
